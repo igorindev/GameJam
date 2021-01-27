@@ -41,14 +41,6 @@ public class Interact : MonoBehaviour
         }
     }
 
-    public void ItemDelivered()
-    {
-        if (coroutine != null)
-        {
-            StopCoroutine(coroutine);
-        }
-    }
-
     IEnumerator MoveItemToHand()
     {
         float delay = 0;
