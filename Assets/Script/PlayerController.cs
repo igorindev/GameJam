@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(CharacterController))]
 
-public class Movement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float speed = 7.5f;
     public float jumpSpeed = 8.0f;
@@ -19,10 +19,27 @@ public class Movement : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    Vector2 cameraValue;
+    Vector2 movement;
+    bool jump;
+
     void Start()
     {
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
+    }
+
+    public void Movement(Vector2 move)
+    {
+        movement = move;
+    }
+    public void Look(Vector2 look)
+    {
+        cameraValue = look;
+    }
+    public void Jump(bool value)
+    {
+        jump = value;
     }
 
     void Update()
@@ -32,11 +49,11 @@ public class Movement : MonoBehaviour
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            float curSpeedX = canMove ? speed * Input.GetAxis("Vertical") : 0;
-            float curSpeedY = canMove ? speed * Input.GetAxis("Horizontal") : 0;
+            float curSpeedX = canMove ? speed * movement.y : 0;
+            float curSpeedY = canMove ? speed * movement.x : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (Input.GetButton("Jump") && canMove)
+            if (jump)
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -53,8 +70,8 @@ public class Movement : MonoBehaviour
         // Player and Camera rotation
         if (canMove)
         {
-            rotation.y += Input.GetAxis("Mouse X") * lookSpeed;
-            rotation.x += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotation.y += cameraValue.x * lookSpeed;
+            rotation.x -= cameraValue.y * lookSpeed;
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
