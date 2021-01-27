@@ -9,9 +9,7 @@ public class Interact : MonoBehaviour
     [SerializeField] LayerMask layers;
     [SerializeField] float followDelay = 1f;
     [SerializeField] float interactDistance = 1f;
-    Rigidbody holdingItem;
-
-    Vector3 velocity;
+    Delivery holdingItem;
 
     Coroutine coroutine;
 
@@ -22,9 +20,9 @@ public class Interact : MonoBehaviour
         {
             if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
             {
-                holdingItem = hit.transform.GetComponent<Rigidbody>();
+                holdingItem = hit.transform.GetComponent<Delivery>();
                 holdingItem.transform.SetParent(handPos);
-                holdingItem.useGravity = false;
+                holdingItem.Rb.useGravity = false;
 
                 coroutine = StartCoroutine(MoveItemToHand());
             }
@@ -36,18 +34,34 @@ public class Interact : MonoBehaviour
                 StopCoroutine(coroutine);
             }
 
-            holdingItem.useGravity = true;
+            holdingItem.Rb.useGravity = true;
 
             holdingItem.transform.SetParent(null);
             holdingItem = null;
         }
     }
 
+    public void ItemDelivered()
+    {
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
+    }
+
     IEnumerator MoveItemToHand()
     {
-        while (holdingItem.transform.localPosition != Vector3.zero)
+        float delay = 0;
+
+        while (delay < followDelay)
         {
-            holdingItem.transform.localPosition = Vector3.SmoothDamp(holdingItem.transform.localPosition, Vector3.zero, ref velocity, followDelay);
+            if (holdingItem == null)
+            {
+                yield break;
+            }
+
+            delay += Time.deltaTime;
+            holdingItem.transform.localPosition = Vector3.Lerp(holdingItem.transform.localPosition, Vector3.zero, delay);
 
             yield return null;
         }
