@@ -1,11 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class DeliveryZone : MonoBehaviour
 {
     public Itens currentItemToDeliver;
     [SerializeField] float timeForNewDelivery = 2;
+    [SerializeField] float waitDuration = 30;
+    [SerializeField] Image timerBar;
 
     Coroutine timer;
     bool isColldown = false;
@@ -58,12 +62,35 @@ public class DeliveryZone : MonoBehaviour
         currentItemToDeliver = i;
 
         timer = StartCoroutine(RunTimer());
+    }
 
+    void TimeUp()
+    {
+        if (timer != null)
+        {
+            StopCoroutine(timer);
+        }
+
+        isColldown = true;
+
+        StartCoroutine(CreateNewDelivery());
     }
 
     IEnumerator RunTimer()
     {
-        yield return new WaitForSeconds(timeForNewDelivery);
+        float count = waitDuration;
+        while (count > 0)
+        {
+            count -= Time.deltaTime;
+
+            timerBar.fillAmount = count/waitDuration;
+
+            yield return null;
+        }
+
+        timerBar.fillAmount = 0;
+
+        TimeUp();
     }
 
     void ReduceTimerForNextDeliver()
