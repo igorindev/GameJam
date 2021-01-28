@@ -11,6 +11,7 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
     [SerializeField] TextMeshProUGUI itemName;
+    [SerializeField] ParticleSystem effect;
 
     Coroutine timer;
     bool isColldown = false;
@@ -40,7 +41,7 @@ public class DeliveryZone : MonoBehaviour
         //Give points
         itemName.text = "Delivered!";
         timerBar.transform.parent.gameObject.SetActive(false);
-
+        effect.Play();
         if (timer != null)
         {
             StopCoroutine(timer);

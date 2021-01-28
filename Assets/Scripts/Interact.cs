@@ -7,13 +7,13 @@ public class Interact : MonoBehaviour
     [SerializeField] Transform cameraPos;
     [SerializeField] Transform handPos;
     [SerializeField] LayerMask layers;
-    [SerializeField] float followDelay = 1f;
     [SerializeField] float interactDistance = 1f;
+    [SerializeField] float pullForce = 10f;
     [SerializeField] float force = 10f;
-    [SerializeField] float breakLimit = 10f;
     Delivery holdingItem;
 
-    Coroutine coroutine;
+
+    Material hitted;
 
     public void InteractWithItem(bool value)
     {
@@ -25,10 +25,11 @@ public class Interact : MonoBehaviour
                 if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
                 {
                     holdingItem = hit.transform.GetComponent<Delivery>();
-                    holdingItem.transform.SetParent(handPos);
+
                     holdingItem.Rb.isKinematic = true;
 
-                    coroutine = StartCoroutine(MoveItemToHand());
+                    hitted.SetFloat("Boolean_Outline", 0);
+                    hitted = null;
                 }
             }
         }
@@ -36,11 +37,6 @@ public class Interact : MonoBehaviour
         {
             if (holdingItem != null)
             {
-                if (coroutine != null)
-                {
-                    StopCoroutine(coroutine);
-                }
-
                 holdingItem.Rb.useGravity = true;
                 holdingItem.Rb.isKinematic = false;
                 holdingItem.InHand = true;
@@ -55,11 +51,6 @@ public class Interact : MonoBehaviour
     {
         if (holdingItem != null)
         {
-            if (coroutine != null)
-            {
-                StopCoroutine(coroutine);
-            }
-
             Rigidbody rb = holdingItem.Rb;
 
             rb.useGravity = true;
@@ -74,22 +65,40 @@ public class Interact : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
-        
-
-        
-    }
-
-    IEnumerator MoveItemToHand()
-    {
-        while (true)
+        if (holdingItem != null)
         {
-            Vector3 v = Vector3.zero;
+            float rbMass = pullForce;
             //lerp
-            holdingItem.Rb.MovePosition(Vector3.SmoothDamp(holdingItem.transform.position, handPos.position, ref v, 0.6f));
+            Vector3 pos = new Vector3(handPos.position.x, Mathf.Clamp(handPos.position.y, 1, 100), handPos.position.z);
 
-            yield return new WaitForFixedUpdate();
+            Vector3 movePosition = Vector3.Lerp(holdingItem.transform.position, pos, rbMass * Time.deltaTime);
+
+            Quaternion rot = Quaternion.Lerp(holdingItem.transform.localRotation, handPos.rotation, 10 * Time.deltaTime);
+
+            holdingItem.transform.position = movePosition;
+            holdingItem.transform.rotation = rot;
+            return;
+        }
+
+        if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
+        {
+            if (hitted != null)
+            {
+                hitted.SetFloat("Boolean_Outline", 0);
+            }
+
+            hitted = hit.transform.GetComponent<Renderer>().material;
+
+            hitted.SetFloat("Boolean_Outline", 1);
+            return;
+        }
+
+        if (hitted != null)
+        {
+            hitted.SetFloat("Boolean_Outline", 0);
+            hitted = null;
         }
     }
 }
