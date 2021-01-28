@@ -70,10 +70,10 @@ public class GameManager : MonoBehaviour
 
     void NewOrders()
     {
-        if (allGameNotSpawned.Count <= 0) { return; }
-
         for (int i = 0; i < numOfDropItens; i++)
         {
+            if (allGameNotSpawned.Count <= 0) { return; }
+
             int value = Random.Range(0, allGameNotSpawned.Count);
             allGameNotSpawned[value].transform.position = SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f);
             allGameNotSpawned[value].gameObject.SetActive(true);
@@ -95,7 +95,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            GameOver();
             return null;
         }
     }

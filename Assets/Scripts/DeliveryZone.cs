@@ -67,9 +67,10 @@ public class DeliveryZone : MonoBehaviour
     {
         Delivery item = GameManager.instance.GetItem();
 
-        if (item == null)
+        while (item == null)
         {
-            yield break;
+            yield return new WaitForSeconds(2);
+            item = GameManager.instance.GetItem();
         }
 
         yield return new WaitForSeconds(timeForNewDelivery);
