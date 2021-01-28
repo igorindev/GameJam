@@ -42,6 +42,7 @@ public class Interact : MonoBehaviour
 
                 holdingItem.Rb.useGravity = true;
                 holdingItem.Rb.isKinematic = false;
+                holdingItem.InHand = true;
 
                 holdingItem.transform.SetParent(null);
                 holdingItem = null;
@@ -63,6 +64,7 @@ public class Interact : MonoBehaviour
             rb.useGravity = true;
             rb.isKinematic = false;
 
+            holdingItem.InHand = true;
             holdingItem.transform.SetParent(null);
             holdingItem = null;
 
