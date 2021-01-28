@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public VisualEffect effect;
     [SerializeField] Transform spawnPoint;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] Delivery[] allGameItens;

@@ -83,7 +83,7 @@ public class Interact : MonoBehaviour
 
             delay += Time.deltaTime;
             holdingItem.transform.localPosition = Vector3.Lerp(holdingItem.transform.localPosition, Vector3.zero, delay);
-            holdingItem.transform.localRotation = Quaternion.Lerp(holdingItem.transform.localRotation, Quaternion.Euler(-90, 0, 0), delay);
+            holdingItem.transform.localRotation = Quaternion.Lerp(holdingItem.transform.localRotation, Quaternion.Euler(-90, 180, 0), delay);
 
             yield return null;
         }

@@ -1319,6 +1319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034f8c16ae440d044aaf105264cf2e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  effect: {fileID: 2099605600711299075, guid: f86a3d0b38ba91748924c33ebf44fa4a, type: 3}
   spawnPoint: {fileID: 1558817757}
   timerText: {fileID: 1588926831}
   allGameItens:
@@ -1868,6 +1869,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7177279189619814044, guid: bd2995d1ed1300b498f1dc5d4f368175,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec05d4ae87ff44b4ca46ba0818c8052a, type: 2}
     - target: {fileID: -3009826514356544072, guid: bd2995d1ed1300b498f1dc5d4f368175,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
