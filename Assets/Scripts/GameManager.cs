@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     public Delivery[] AllGameItens { get => allGameItens; set => allGameItens = value; }
     public List<Delivery> AllGameSpawned { get => allGameSpawned; set => allGameSpawned = value; }
+    public Transform SpawnPoint { get => spawnPoint; }
 
     int minutes;
     int seconds;
@@ -51,7 +52,7 @@ public class GameManager : MonoBehaviour
         {
             int value = Random.Range(0, allGameItens.Length);
 
-            Delivery item = Instantiate(allGameItens[value], spawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
+            Delivery item = Instantiate(allGameItens[value], SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
 
             allGameSpawned.Add(item);
         }
@@ -61,10 +62,19 @@ public class GameManager : MonoBehaviour
 
     public Delivery GetItem()
     {
-        int value = Random.Range(0, allGameSpawned.Count);
-        Delivery d = allGameSpawned[value];
-        allGameSpawned.RemoveAt(value);
-        return d;
+        if (allGameSpawned.Count >= 0)
+        {
+            int value = Random.Range(0, allGameSpawned.Count);
+            Delivery d = allGameSpawned[value];
+            allGameSpawned.RemoveAt(value);
+            return d;
+        }
+        else
+        {
+            GameOver();
+            return null;
+        }
+        
     }
 
     void TimerUpdate(float delayTime = 1)
@@ -115,7 +125,7 @@ public class GameManager : MonoBehaviour
         {
             int value = Random.Range(0, allGameItens.Length);
 
-            Delivery item = Instantiate(allGameItens[value], spawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
+            Delivery item = Instantiate(allGameItens[value], SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
 
             allGameSpawned.Add(item);
         }

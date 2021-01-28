@@ -1,12 +1,11 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class DeliveryZone : MonoBehaviour
 {
-    public Itens currentItemToDeliver;
+    public string currentItemToDeliver;
     [SerializeField] float timeForNewDelivery = 2;
     [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
@@ -18,7 +17,8 @@ public class DeliveryZone : MonoBehaviour
 
     private void Start()
     {
-        Create();
+        Delivery item = GameManager.instance.GetItem();
+        Create(item);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,9 +27,9 @@ public class DeliveryZone : MonoBehaviour
         {
             if (other.CompareTag("Delivery"))
             {
-                if (other.GetComponent<Delivery>().ItemName == currentItemToDeliver)
+                if (other.GetComponent<Delivery>().name.Split(char.Parse("("))[0] == currentItemToDeliver)
                 {
-                    Destroy(other.gameObject);
+                    other.gameObject.SetActive(false);
                     ReceiveDelivery();
                 }
             }
@@ -42,6 +42,7 @@ public class DeliveryZone : MonoBehaviour
         itemName.text = "Delivered!";
         timerBar.transform.parent.gameObject.SetActive(false);
         effect.Play();
+
         if (timer != null)
         {
             StopCoroutine(timer);
@@ -54,17 +55,22 @@ public class DeliveryZone : MonoBehaviour
 
     IEnumerator CreateNewDelivery()
     {
-        yield return new WaitForSeconds(timeForNewDelivery);
-        isColldown = false;
-        Create();
-    }
-
-    void Create()
-    {
-        //Ruffle new item to delivery
         Delivery item = GameManager.instance.GetItem();
 
-        currentItemToDeliver = item.ItemName;
+        if (item == null)
+        {
+            yield break;
+        }
+
+        yield return new WaitForSeconds(timeForNewDelivery);
+        isColldown = false;
+        Create(item);
+    }
+
+    void Create(Delivery item)
+    {
+        //Ruffle new item to delivery
+        currentItemToDeliver = item.name.Split(char.Parse("("))[0];
 
         itemName.text = currentItemToDeliver.ToString();
 
@@ -119,6 +125,14 @@ public class DeliveryZone : MonoBehaviour
 
 public enum Itens
 {
-    Box,
-    Cube
+    Altere,
+    Ancora,
+    Banana,
+    Banjo,
+    Baralho,
+    Bengala,
+    BoiaAmarela,
+    BoiaAzul,
+    BoiaVermelha,
+    BolaDeBolicheCinza,
 }
