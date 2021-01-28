@@ -12,7 +12,17 @@ public class Blackout : MonoBehaviour
         RuffleDelayTime();
     }
 
-    public void RuffleDelayTime()
+    public void LightsOn()
+    {
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].enabled = true;
+        }
+
+        RuffleDelayTime();
+    }
+
+    void RuffleDelayTime()
     {
         float delay = Random.Range(timeToNextBlackout.x, timeToNextBlackout.y);
 
@@ -22,5 +32,10 @@ public class Blackout : MonoBehaviour
     IEnumerator Delay(float delay)
     {
         yield return new WaitForSeconds(delay);
+
+        for (int i = 0; i < lights.Length; i++)
+        {
+            lights[i].enabled = false;
+        }
     }
 }

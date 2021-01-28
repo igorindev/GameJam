@@ -19,12 +19,14 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
+    Interact interact;
     Vector2 cameraValue;
     Vector2 movement;
     bool jump;
 
     void Start()
     {
+        interact = GetComponent<Interact>();
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
     }
@@ -63,6 +65,11 @@ public class PlayerController : MonoBehaviour
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
+
+        if (interact.HoldingItem != null)
+        {
+            moveDirection -= moveDirection * interact.HoldingItem.Rb.mass / 100;
+        }
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);

@@ -15,6 +15,8 @@ public class Interact : MonoBehaviour
 
     Material hitted;
 
+    public Delivery HoldingItem { get => holdingItem; }
+
     public void InteractWithItem(bool value)
     {
         //shot raycast and pick item
