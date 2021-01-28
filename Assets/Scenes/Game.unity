@@ -1623,9 +1623,10 @@ MonoBehaviour:
   - {fileID: 8645439744069978944, guid: 7265b810ab4f4ac4785d8ced32f08297, type: 3}
   - {fileID: 4121159018962998420, guid: 4bab9744f06ae4a46afbf1da5c2f7269, type: 3}
   allGameSpawned: []
+  allGameNotSpawned: []
   minutesDuration: 30
   numOfStartItens: 10
-  numOfDropItens: 1
+  numOfDropItens: 5
 --- !u!1 &1750591608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,7 +2445,7 @@ GameObject:
   - component: {fileID: 4173078436349844143}
   m_Layer: 9
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

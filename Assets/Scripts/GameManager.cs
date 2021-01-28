@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] Delivery[] allGameItens;
     [SerializeField] List<Delivery> allGameSpawned;
+    [SerializeField] List<Delivery> allGameNotSpawned;
     [SerializeField] public int minutesDuration;
     [SerializeField] public int numOfStartItens;
     [SerializeField] public int numOfDropItens;
@@ -41,6 +42,11 @@ public class GameManager : MonoBehaviour
         Init();
     }
 
+    public void RemoveDelivery(Delivery delivery)
+    {
+        allGameNotSpawned.Add(delivery);
+    }
+
     void Update()
     {
         TimerUpdate();
@@ -48,18 +54,36 @@ public class GameManager : MonoBehaviour
 
     void Init()
     {
-        for (int i = 0; i < numOfStartItens; i++)
+        for (int i = 0; i < allGameItens.Length; i++)
         {
-            int value = Random.Range(0, allGameItens.Length);
+            int value = i;
 
-            Delivery item = Instantiate(allGameItens[value], SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
+            Delivery item = Instantiate(allGameItens[value]);
 
-            allGameSpawned.Add(item);
+            item.gameObject.SetActive(false);
+
+            allGameNotSpawned.Add(item);
         }
 
         InvokeRepeating("NewOrders", 1, 8);
     }
 
+    void NewOrders()
+    {
+        if (allGameNotSpawned.Count <= 0) { return; }
+
+        for (int i = 0; i < numOfDropItens; i++)
+        {
+            int value = Random.Range(0, allGameNotSpawned.Count);
+            allGameNotSpawned[value].transform.position = SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f);
+            allGameNotSpawned[value].gameObject.SetActive(true);
+
+            allGameSpawned.Add(allGameNotSpawned[value]);
+            allGameNotSpawned.RemoveAt(value);
+        }
+    }
+
+    //The dlivery chose a spawned item to be delivered
     public Delivery GetItem()
     {
         if (allGameSpawned.Count >= 0)
@@ -74,7 +98,6 @@ public class GameManager : MonoBehaviour
             GameOver();
             return null;
         }
-        
     }
 
     void TimerUpdate(float delayTime = 1)
@@ -114,20 +137,8 @@ public class GameManager : MonoBehaviour
 
     }
 
-    void GiveMoreTime()
+    public void GiveMoreTime()
     {
         seconds += 5;
-    }
-
-    void NewOrders()
-    {
-        for (int i = 0; i < numOfDropItens; i++)
-        {
-            int value = Random.Range(0, allGameItens.Length);
-
-            Delivery item = Instantiate(allGameItens[value], SpawnPoint.position + Random.insideUnitSphere * Random.Range(0, 1.5f), Quaternion.identity);
-
-            allGameSpawned.Add(item);
-        }
     }
 }

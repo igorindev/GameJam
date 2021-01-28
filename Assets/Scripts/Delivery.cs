@@ -6,9 +6,9 @@ using UnityEngine.VFX;
 [RequireComponent(typeof(Rigidbody))]
 public class Delivery : MonoBehaviour
 {
-    [SerializeField] Itens itemName;
+    [SerializeField] MaterialType itemName;
     [SerializeField] Rigidbody rb;
-    public Itens ItemName { get => itemName; set => itemName = value; }
+    public MaterialType MaterialValue { get => itemName; set => itemName = value; }
     public Rigidbody Rb { get => rb; set => rb = value; }
     public bool InHand { get; set; } = false;    
 
@@ -23,3 +23,11 @@ public class Delivery : MonoBehaviour
         }
     }
 }
+
+
+public enum MaterialType
+{
+    Metal,
+    Plastic,
+}
+

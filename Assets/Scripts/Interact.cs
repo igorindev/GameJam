@@ -70,7 +70,7 @@ public class Interact : MonoBehaviour
         if (holdingItem != null)
         {
             float rbMass = pullForce;
-            //lerp
+            
             Vector3 pos = new Vector3(handPos.position.x, Mathf.Clamp(handPos.position.y, 1, 100), handPos.position.z);
 
             Vector3 movePosition = Vector3.Lerp(holdingItem.transform.position, pos, rbMass * Time.deltaTime);

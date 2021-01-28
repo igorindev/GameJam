@@ -17,6 +17,11 @@ public class DeliveryZone : MonoBehaviour
 
     private void Start()
     {
+        Invoke("Init", 1f);
+    }
+
+    void Init()
+    {
         Delivery item = GameManager.instance.GetItem();
         Create(item);
     }
@@ -27,9 +32,12 @@ public class DeliveryZone : MonoBehaviour
         {
             if (other.CompareTag("Delivery"))
             {
-                if (other.GetComponent<Delivery>().name.Split(char.Parse("("))[0] == currentItemToDeliver)
+                Delivery delivery = other.GetComponent<Delivery>();
+
+                if (delivery.name.Split(char.Parse("("))[0] == currentItemToDeliver)
                 {
-                    other.gameObject.SetActive(false);
+                    delivery.gameObject.SetActive(false);
+                    GameManager.instance.RemoveDelivery(delivery);
                     ReceiveDelivery();
                 }
             }
@@ -42,6 +50,8 @@ public class DeliveryZone : MonoBehaviour
         itemName.text = "Delivered!";
         timerBar.transform.parent.gameObject.SetActive(false);
         effect.Play();
+
+        GameManager.instance.GiveMoreTime();
 
         if (timer != null)
         {
@@ -121,18 +131,4 @@ public class DeliveryZone : MonoBehaviour
     {
 
     }
-}
-
-public enum Itens
-{
-    Altere,
-    Ancora,
-    Banana,
-    Banjo,
-    Baralho,
-    Bengala,
-    BoiaAmarela,
-    BoiaAzul,
-    BoiaVermelha,
-    BolaDeBolicheCinza,
 }
