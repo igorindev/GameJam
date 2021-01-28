@@ -2178,7 +2178,7 @@ MonoBehaviour:
   gravity: 20
   playerCamera: {fileID: 4173078436204741728}
   lookSpeed: 0.08
-  lookXLimit: 45
+  lookXLimit: 50
   moveDirection: {x: 0, y: 0, z: 0}
   canMove: 1
 --- !u!114 &4173078436349844145
