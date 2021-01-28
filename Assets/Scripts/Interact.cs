@@ -24,10 +24,15 @@ public class Interact : MonoBehaviour
                 if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
                 {
                     holdingItem = hit.transform.GetComponent<Delivery>();
-                    holdingItem.transform.SetParent(handPos);
-                    holdingItem.Rb.isKinematic = true;
+                    //holdingItem.transform.SetParent(handPos);
+                    //holdingItem.Rb.isKinematic = true;
 
-                    coroutine = StartCoroutine(MoveItemToHand());
+                    SpringJoint s = holdingItem.gameObject.AddComponent<SpringJoint>();
+                    s.connectedBody = handPos.GetComponent<Rigidbody>();
+                    s.spring = 100;
+                    s.autoConfigureConnectedAnchor = false;
+                    s.damper = 10;
+                    //coroutine = StartCoroutine(MoveItemToHand());
                 }
             }
         }
@@ -39,12 +44,14 @@ public class Interact : MonoBehaviour
                 {
                     StopCoroutine(coroutine);
                 }
+                Destroy(holdingItem.GetComponent<SpringJoint>());
+                //holdingItem.Rb.useGravity = true;
+                //holdingItem.Rb.isKinematic = false;
 
-                holdingItem.Rb.useGravity = true;
-                holdingItem.Rb.isKinematic = false;
-
-                holdingItem.transform.SetParent(null);
+                //holdingItem.transform.SetParent(null);
                 holdingItem = null;
+
+                
             }
         }
     }
@@ -53,6 +60,8 @@ public class Interact : MonoBehaviour
     {
         if (holdingItem != null)
         {
+            Destroy(holdingItem.GetComponent<SpringJoint>());
+
             if (coroutine != null)
             {
                 StopCoroutine(coroutine);
@@ -60,8 +69,8 @@ public class Interact : MonoBehaviour
 
             Rigidbody rb = holdingItem.Rb;
 
-            rb.useGravity = true;
-            rb.isKinematic = false;
+            //rb.useGravity = true;
+            //rb.isKinematic = false;
 
             holdingItem.transform.SetParent(null);
             holdingItem = null;

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
 public class Delivery : MonoBehaviour
 {
     [SerializeField] Itens itemName;
