@@ -22,6 +22,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Textura
+    second: {fileID: 2100000, guid: b7122c32c03fbf642aec9e1d11c5871e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Textura_Carro
     second: {fileID: 2100000, guid: 3828a058323202e41b5269b6fbc445c7, type: 2}
   - first:
