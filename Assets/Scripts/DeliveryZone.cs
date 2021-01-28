@@ -10,6 +10,7 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] float timeForNewDelivery = 2;
     [SerializeField] float waitDuration = 30;
     [SerializeField] Image timerBar;
+    [SerializeField] TextMeshProUGUI itemName;
 
     Coroutine timer;
     bool isColldown = false;
@@ -37,6 +38,8 @@ public class DeliveryZone : MonoBehaviour
     void ReceiveDelivery()
     {
         //Give points
+        itemName.text = "Delivered!";
+        timerBar.transform.parent.gameObject.SetActive(false);
 
         if (timer != null)
         {
@@ -61,10 +64,14 @@ public class DeliveryZone : MonoBehaviour
         Itens i = (Itens)Random.Range(0, 2);
         currentItemToDeliver = i;
 
+        itemName.text = currentItemToDeliver.ToString();
+
+        timerBar.transform.parent.gameObject.SetActive(true);
+
         timer = StartCoroutine(RunTimer());
     }
 
-    void TimeUp()
+    void TimesUp()
     {
         if (timer != null)
         {
@@ -74,6 +81,10 @@ public class DeliveryZone : MonoBehaviour
         isColldown = true;
 
         StartCoroutine(CreateNewDelivery());
+
+        itemName.text = "Time's Up!";
+
+        timerBar.transform.parent.gameObject.SetActive(false);
     }
 
     IEnumerator RunTimer()
@@ -90,7 +101,7 @@ public class DeliveryZone : MonoBehaviour
 
         timerBar.fillAmount = 0;
 
-        TimeUp();
+        TimesUp();
     }
 
     void ReduceTimerForNextDeliver()

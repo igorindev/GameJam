@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
         TimerUpdate();
     }
 
-    public void TimerUpdate(float delayTime = 1)
+    void TimerUpdate(float delayTime = 1)
     {
         if (minutes >= 0)
         {
@@ -65,4 +65,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void GameOver()
+    {
+
+    }
+
+    void ShowPoints()
+    {
+
+    }
 }

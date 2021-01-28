@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/Script/Input/PlayerInput.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/Scripts/Input/PlayerInput.inputactions'
 
 using System;
 using System.Collections;
@@ -132,7 +132,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""084df7f4-ddd4-4e9f-9ac3-384945dda77f"",
-                    ""path"": ""<Keyboard>/f"",
+                    ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

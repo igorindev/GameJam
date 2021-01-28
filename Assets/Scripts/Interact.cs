@@ -13,31 +13,38 @@ public class Interact : MonoBehaviour
 
     Coroutine coroutine;
 
-    public void InteractWithItem()
+    public void InteractWithItem(bool value)
     {
         //shot raycast and pick item
-        if (holdingItem == null)
+        if (value)
         {
-            if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
+            if (holdingItem == null)
             {
-                holdingItem = hit.transform.GetComponent<Delivery>();
-                holdingItem.transform.SetParent(handPos);
-                holdingItem.Rb.useGravity = false;
+                if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
+                {
+                    holdingItem = hit.transform.GetComponent<Delivery>();
+                    holdingItem.transform.SetParent(handPos);
+                    holdingItem.Rb.isKinematic = true;
 
-                coroutine = StartCoroutine(MoveItemToHand());
+                    coroutine = StartCoroutine(MoveItemToHand());
+                }
             }
         }
         else
         {
-            if (coroutine != null)
+            if (holdingItem != null)
             {
-                StopCoroutine(coroutine);
+                if (coroutine != null)
+                {
+                    StopCoroutine(coroutine);
+                }
+
+                holdingItem.Rb.useGravity = true;
+                holdingItem.Rb.isKinematic = false;
+
+                holdingItem.transform.SetParent(null);
+                holdingItem = null;
             }
-
-            holdingItem.Rb.useGravity = true;
-
-            holdingItem.transform.SetParent(null);
-            holdingItem = null;
         }
     }
 
@@ -54,6 +61,7 @@ public class Interact : MonoBehaviour
 
             delay += Time.deltaTime;
             holdingItem.transform.localPosition = Vector3.Lerp(holdingItem.transform.localPosition, Vector3.zero, delay);
+            holdingItem.transform.localRotation = Quaternion.Lerp(holdingItem.transform.localRotation, Quaternion.identity, delay);
 
             yield return null;
         }
