@@ -10,6 +10,7 @@ public class Interact : MonoBehaviour
     [SerializeField] float followDelay = 1f;
     [SerializeField] float interactDistance = 1f;
     [SerializeField] float force = 10f;
+    [SerializeField] float breakLimit = 10f;
     Delivery holdingItem;
 
     Coroutine coroutine;
@@ -72,24 +73,23 @@ public class Interact : MonoBehaviour
         }
     }
 
+
+    private void FixedUpdate()
+    {
+        
+
+        
+    }
+
     IEnumerator MoveItemToHand()
     {
-        float delay = 0;
-
-        while (delay < followDelay)
+        while (true)
         {
-            if (holdingItem == null)
-            {
-                yield break;
-            }
+            Vector3 v = Vector3.zero;
+            //lerp
+            holdingItem.Rb.MovePosition(Vector3.SmoothDamp(holdingItem.transform.position, handPos.position, ref v, 0.6f));
 
-            delay += Time.deltaTime;
-            holdingItem.transform.localPosition = Vector3.Lerp(holdingItem.transform.localPosition, Vector3.zero, delay);
-            holdingItem.transform.localRotation = Quaternion.Lerp(holdingItem.transform.localRotation, Quaternion.Euler(-90, 180, 0), delay);
-
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
-
-        holdingItem.transform.localPosition = Vector3.zero;
     }
 }
