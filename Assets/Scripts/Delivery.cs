@@ -10,12 +10,16 @@ public class Delivery : MonoBehaviour
     [SerializeField] Rigidbody rb;
     public Itens ItemName { get => itemName; set => itemName = value; }
     public Rigidbody Rb { get => rb; set => rb = value; }
+    public bool InHand { get; set; } = false;    
 
     private void OnCollisionEnter(Collision collision)
     {
-        VisualEffect effect = Instantiate(GameManager.instance.effect);
+        if (InHand)
+        {
+            GameManager.instance.effect.transform.position = collision.GetContact(0).point;
+            GameManager.instance.effect.Play();
 
-        effect.transform.position = collision.GetContact(0).point;
-        effect.Play();
+            InHand = false;
+        }
     }
 }
