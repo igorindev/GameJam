@@ -8,7 +8,7 @@ public class DeliveryZone : MonoBehaviour
 {
     public Itens currentItemToDeliver;
     [SerializeField] float timeForNewDelivery = 2;
-    [SerializeField] float waitDuration = 30;
+    [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
     [SerializeField] TextMeshProUGUI itemName;
 
@@ -61,8 +61,9 @@ public class DeliveryZone : MonoBehaviour
     void Create()
     {
         //Ruffle new item to delivery
-        Itens i = (Itens)Random.Range(0, 2);
-        currentItemToDeliver = i;
+        Delivery item = GameManager.instance.GetItem();
+
+        currentItemToDeliver = item.ItemName;
 
         itemName.text = currentItemToDeliver.ToString();
 

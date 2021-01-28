@@ -24,6 +24,8 @@ public class PlayerInputHandle : MonoBehaviour
 
         inputActions.Player.Interact.performed += ctx => interact.InteractWithItem(true);
         inputActions.Player.Interact.canceled += ctx => interact.InteractWithItem(false);
+
+        inputActions.Player.Throw.performed += ctx => interact.Throw();
     }
 
     private void OnEnable()

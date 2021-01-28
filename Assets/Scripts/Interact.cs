@@ -9,6 +9,7 @@ public class Interact : MonoBehaviour
     [SerializeField] LayerMask layers;
     [SerializeField] float followDelay = 1f;
     [SerializeField] float interactDistance = 1f;
+    [SerializeField] float force = 10f;
     Delivery holdingItem;
 
     Coroutine coroutine;
@@ -45,6 +46,27 @@ public class Interact : MonoBehaviour
                 holdingItem.transform.SetParent(null);
                 holdingItem = null;
             }
+        }
+    }
+
+    public void Throw()
+    {
+        if (holdingItem != null)
+        {
+            if (coroutine != null)
+            {
+                StopCoroutine(coroutine);
+            }
+
+            Rigidbody rb = holdingItem.Rb;
+
+            rb.useGravity = true;
+            rb.isKinematic = false;
+
+            holdingItem.transform.SetParent(null);
+            holdingItem = null;
+
+            rb.AddForce(cameraPos.forward * force);
         }
     }
 
