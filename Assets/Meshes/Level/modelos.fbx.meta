@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: AzulClaro
+    second: {fileID: 2100000, guid: 3828a058323202e41b5269b6fbc445c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Lataria
     second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
   - first:
@@ -14,6 +19,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Placa
     second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Textura_Carro
+    second: {fileID: 2100000, guid: 3828a058323202e41b5269b6fbc445c7, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
