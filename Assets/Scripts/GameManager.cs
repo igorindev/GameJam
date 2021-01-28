@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.VFX;
 using TMPro;
+using NineRealmsTools;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,13 +11,17 @@ public class GameManager : MonoBehaviour
 
     public VisualEffect effect;
     [SerializeField] Transform spawnPoint;
+    [SerializeField] TextMeshProUGUI points;
     [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] FadeAnimation bonusTimer;
     [SerializeField] Delivery[] allGameItens;
     [SerializeField] List<Delivery> allGameSpawned;
     [SerializeField] List<Delivery> allGameNotSpawned;
     [SerializeField] public int minutesDuration;
     [SerializeField] public int numOfStartItens;
     [SerializeField] public int numOfDropItens;
+
+    float totalPoints; 
 
     public Delivery[] AllGameItens { get => allGameItens; set => allGameItens = value; }
     public List<Delivery> AllGameSpawned { get => allGameSpawned; set => allGameSpawned = value; }
@@ -139,5 +144,12 @@ public class GameManager : MonoBehaviour
     public void GiveMoreTime()
     {
         seconds += 5;
+        bonusTimer.StarFade();
+    }
+
+    public void UpdatePoints()
+    {
+        totalPoints += 10;
+        points.text = totalPoints.ToString();
     }
 }

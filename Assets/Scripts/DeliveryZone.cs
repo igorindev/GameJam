@@ -52,6 +52,7 @@ public class DeliveryZone : MonoBehaviour
         effect.Play();
 
         GameManager.instance.GiveMoreTime();
+        GameManager.instance.UpdatePoints();
 
         if (timer != null)
         {
