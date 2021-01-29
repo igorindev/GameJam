@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 966371835143654839}
   - component: {fileID: 4706311969065232729}
   - component: {fileID: 1564304136881790545}
-  - component: {fileID: 1038613453291626010}
-  - component: {fileID: 199922636389241033}
   - component: {fileID: 8077334641223416348}
   - component: {fileID: 2238226308847076520}
+  - component: {fileID: 8405297771999337507}
   m_Layer: 8
   m_Name: Maquina_Refri
   m_TagString: Delivery
@@ -84,33 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1038613453291626010
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769346575721110203}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.3815027, y: 0.94155025, z: 2.5918696}
-  m_Center: {x: -9.974805e-17, y: -0.0041321516, z: 1.2861874}
---- !u!136 &199922636389241033
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 769346575721110203}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5054041
-  m_Height: 3.3214765
-  m_Direction: 2
-  m_Center: {x: 0.24751566, y: -0.25863585, z: 1.1712766}
 --- !u!54 &8077334641223416348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -142,3 +114,16 @@ MonoBehaviour:
   materialValue: 0
   rb: {fileID: 8077334641223416348}
   displaySprite: {fileID: 0}
+--- !u!65 &8405297771999337507
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 769346575721110203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3815027, y: 1.3201591, z: 2.5918696}
+  m_Center: {x: -9.413876e-15, y: -0.19343594, z: 1.2861851}
