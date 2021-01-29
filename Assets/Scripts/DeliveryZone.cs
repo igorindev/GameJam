@@ -129,6 +129,7 @@ public class DeliveryZone : MonoBehaviour
             count -= Time.deltaTime;
 
             timerBar.fillAmount = count/waitDuration;
+            timerBar.color = Color.Lerp(Color.red, Color.green, count / waitDuration);
 
             yield return null;
         }
