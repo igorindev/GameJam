@@ -39,6 +39,7 @@ public class DeliveryZone : MonoBehaviour
                 if (delivery.name.Split(char.Parse("("))[0] == currentItemToDeliver)
                 {
                     delivery.gameObject.SetActive(false);
+                    delivery.gameObject.layer = 8;
                     GameManager.instance.RemoveDelivery(delivery);
                     ReceiveDelivery();
                 }

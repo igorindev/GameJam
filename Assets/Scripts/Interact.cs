@@ -33,7 +33,7 @@ public class Interact : MonoBehaviour
                     else
                     {
                         holdingItem = hit.transform.GetComponent<Delivery>();
-
+                        holdingItem.gameObject.layer = 10;
                         holdingItem.Rb.isKinematic = true;
 
                         hitted.SetFloat("Boolean_Outline", 0);
@@ -49,7 +49,7 @@ public class Interact : MonoBehaviour
                 holdingItem.Rb.useGravity = true;
                 holdingItem.Rb.isKinematic = false;
                 holdingItem.InHand = true;
-
+                holdingItem.gameObject.layer = 8;
                 holdingItem.transform.SetParent(null);
                 holdingItem = null;
             }
@@ -67,6 +67,7 @@ public class Interact : MonoBehaviour
 
             holdingItem.InHand = true;
             holdingItem.transform.SetParent(null);
+            holdingItem.gameObject.layer = 8;
             holdingItem = null;
 
             rb.AddForce(cameraPos.forward * force);
