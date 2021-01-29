@@ -8,12 +8,11 @@ public class Blackout : MonoBehaviour
     [SerializeField] Light mainLight;
     [SerializeField] Light switchLight;
 
-    bool on;
+    bool on = false;
 
     private void Start()
     {
         LightsOn();
-        RuffleDelayTime();
     }
 
     public void LightsOn()
