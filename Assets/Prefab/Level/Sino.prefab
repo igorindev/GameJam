@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 1027602885999190112}
   - component: {fileID: 8920879216119165170}
   - component: {fileID: 8464427786148235275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sino
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
