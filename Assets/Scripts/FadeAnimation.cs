@@ -125,6 +125,7 @@ namespace NineRealmsTools
             OutIn,
         }
 
+        #if UNITY_EDITOR
         [CustomEditor(typeof(FadeAnimation))]
         public class FadeAnimationEditor : Editor
         {
@@ -152,5 +153,6 @@ namespace NineRealmsTools
                 }
             }
         }
+        #endif
     }
 }
