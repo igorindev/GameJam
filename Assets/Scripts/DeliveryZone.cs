@@ -10,6 +10,7 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] float timeForNewDelivery = 2;
     [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
+    [SerializeField] Image displayImage;
     [SerializeField] TextMeshProUGUI itemName;
     [SerializeField] ParticleSystem effectCongrats;
     [SerializeField] ParticleSystem effectMissed;
@@ -95,6 +96,8 @@ public class DeliveryZone : MonoBehaviour
         currentItemToDeliver = item.name.Split(char.Parse("("))[0];
 
         itemName.text = currentItemToDeliver.ToString();
+
+        displayImage.sprite = item.DisplaySprite;
 
         timerBar.transform.parent.gameObject.SetActive(true);
 
