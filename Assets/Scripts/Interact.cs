@@ -28,7 +28,7 @@ public class Interact : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("Switch"))
                     {
-                        hit.transform.parent.GetComponent<Blackout>().LightsOn();
+                        hit.transform.parent.GetComponent<Caller>().CallEvent.Invoke();
                     }
                     else
                     {

@@ -185,3 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 6827060254450879218}
+  displaySprite: {fileID: 0}

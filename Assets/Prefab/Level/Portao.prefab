@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2004549650176851946}
   - component: {fileID: 8059737778229534796}
   - component: {fileID: 8201772134568652123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Portao
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

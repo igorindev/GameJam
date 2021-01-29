@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 21116820197800747}
   - component: {fileID: 7068180105905871415}
   - component: {fileID: 838801673394116139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cimento
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -110,8 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f38125dcfd4dd14d9040a2760b11968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 0
+  materialValue: 0
   rb: {fileID: 3871964922968177109}
+  displaySprite: {fileID: 0}
 --- !u!65 &3739471742339198644
 BoxCollider:
   m_ObjectHideFlags: 0

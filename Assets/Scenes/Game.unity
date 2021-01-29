@@ -1538,6 +1538,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 493629726}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &512635483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6980560059521935841, guid: 54620ae00417583448d094aaa3f295b3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1300406474}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &518041960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1968112433305497738, guid: 1f6a353efbab1e34688ed3cdffa58421,
@@ -6050,6 +6056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937491112}
   - component: {fileID: 1937491113}
+  - component: {fileID: 1937491114}
   m_Layer: 0
   m_Name: Blackout
   m_TagString: Untagged
@@ -6087,6 +6094,32 @@ MonoBehaviour:
   timeToNextBlackout: {x: 30, y: 120}
   mainLight: {fileID: 1017944955}
   switchLight: {fileID: 1400576765}
+--- !u!114 &1937491114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937491111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0d8536a6ce1cdb4ca555e8c1f512310, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  callEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1937491113}
+        m_MethodName: LightsOn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1956244104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7272,6 +7305,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: alavanca
       objectReference: {fileID: 0}
+    - target: {fileID: 5708460915627378618, guid: 3e4b6a2354e6eea4fbb6e392796ba0fe,
+        type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 512635483}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e4b6a2354e6eea4fbb6e392796ba0fe, type: 3}
 --- !u!23 &1440602015285416667

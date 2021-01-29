@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 199922636389241033}
   - component: {fileID: 8077334641223416348}
   - component: {fileID: 2238226308847076520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Maquina_Refri
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,3 +141,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 8077334641223416348}
+  displaySprite: {fileID: 0}
