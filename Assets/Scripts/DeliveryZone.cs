@@ -97,7 +97,7 @@ public class DeliveryZone : MonoBehaviour
 
         itemName.text = currentItemToDeliver.ToString();
 
-        displayImage.sprite = item.DisplaySprite;
+        //displayImage.sprite = item.DisplaySprite;
 
         timerBar.transform.parent.gameObject.SetActive(true);
 
