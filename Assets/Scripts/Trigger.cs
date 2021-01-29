@@ -11,8 +11,13 @@ public class Trigger : MonoBehaviour
             other.transform.GetComponent<PlayerController>().enabled = false;
             StartCoroutine(Enable(other));
         }
+        else
+        {
+            other.transform.position = GameManager.instance.SpawnPoint.position;
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        }
 
-        other.transform.position = GameManager.instance.SpawnPoint.position;
+        
     }
 
     IEnumerator Enable(Collider other)
