@@ -7,7 +7,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play_High
+  m_Name: Quit_High
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 378f5759d47951c4488bc88aec8f69db, type: 2}
+  m_Motion: {fileID: 7400000, guid: 45ffd0ed8275ed142bcc46163fe78d70, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -33,7 +33,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play_Selected
+  m_Name: Quit_Selected
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -46,7 +46,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6013b4f56692f6c4eabc667eb0429b53, type: 2}
+  m_Motion: {fileID: 7400000, guid: bec088e3214112743a935b72a6d3705b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -59,7 +59,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play_Disabled
+  m_Name: Quit_Disabled
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -72,7 +72,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6013b4f56692f6c4eabc667eb0429b53, type: 2}
+  m_Motion: {fileID: 7400000, guid: bec088e3214112743a935b72a6d3705b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -85,7 +85,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play_Pressed
+  m_Name: Quit_Pressed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -98,7 +98,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6013b4f56692f6c4eabc667eb0429b53, type: 2}
+  m_Motion: {fileID: 7400000, guid: bec088e3214112743a935b72a6d3705b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -135,7 +135,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play
+  m_Name: Quit
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: Normal
@@ -263,7 +263,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Play_Normal
+  m_Name: Quit_Normal
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -276,7 +276,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6013b4f56692f6c4eabc667eb0429b53, type: 2}
+  m_Motion: {fileID: 7400000, guid: bec088e3214112743a935b72a6d3705b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -318,19 +318,19 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -8795961633014383343}
-    m_Position: {x: -290, y: -70, z: 0}
+    m_Position: {x: -210, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4363628666296313609}
-    m_Position: {x: 30, y: 50, z: 0}
+    m_Position: {x: 30, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2791342716778686879}
-    m_Position: {x: 20, y: -210, z: 0}
+    m_Position: {x: 30, y: -270, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5944045526757749921}
-    m_Position: {x: 330, y: -160, z: 0}
+    m_Position: {x: 250, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3653070754768944130}
-    m_Position: {x: 350, y: -30, z: 0}
+    m_Position: {x: 340, y: -70, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 4067933117798752276}
@@ -341,7 +341,7 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 40, y: -60, z: 0}
+  m_AnyStatePosition: {x: 50, y: -70, z: 0}
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
