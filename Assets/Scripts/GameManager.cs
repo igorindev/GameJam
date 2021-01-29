@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public VisualEffect effect;
-    [SerializeField] Transform spawnPoint;
+    [SerializeField] Transform[] spawnPoint;
     [SerializeField] TextMeshProUGUI points;
     [SerializeField] TextMeshProUGUI timerText;
     [SerializeField] FadeAnimation bonusTimer;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public Delivery[] AllGameItens { get => allGameItens; set => allGameItens = value; }
     public List<Delivery> AllGameSpawned { get => allGameSpawned; set => allGameSpawned = value; }
-    public Transform SpawnPoint { get => spawnPoint; }
+    public Transform SpawnPoint { get => spawnPoint[Random.Range(0, spawnPoint.Length)]; }
 
     int minutes;
     int seconds;
