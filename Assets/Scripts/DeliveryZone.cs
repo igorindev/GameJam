@@ -11,7 +11,8 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
     [SerializeField] TextMeshProUGUI itemName;
-    [SerializeField] ParticleSystem effect;
+    [SerializeField] ParticleSystem effectCongrats;
+    [SerializeField] ParticleSystem effectMissed;
 
     int activeClient;
     Coroutine timer;
@@ -53,7 +54,7 @@ public class DeliveryZone : MonoBehaviour
         clients.GetChild(activeClient).gameObject.SetActive(false);
         itemName.text = "Delivered!";
         timerBar.transform.parent.gameObject.SetActive(false);
-        effect.Play();
+        effectCongrats.Play();
 
         GameManager.instance.GiveMoreTime();
         GameManager.instance.UpdatePoints();
@@ -111,7 +112,7 @@ public class DeliveryZone : MonoBehaviour
         StartCoroutine(CreateNewDelivery());
 
         itemName.text = "Time's Up!";
-
+        effectMissed.Play();
         timerBar.transform.parent.gameObject.SetActive(false);
     }
 
