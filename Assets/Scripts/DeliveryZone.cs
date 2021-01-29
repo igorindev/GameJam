@@ -41,6 +41,7 @@ public class DeliveryZone : MonoBehaviour
                 {
                     delivery.gameObject.SetActive(false);
                     delivery.gameObject.layer = 8;
+                    delivery.Rb.velocity = Vector3.zero;
                     GameManager.instance.RemoveDelivery(delivery);
                     ReceiveDelivery();
                 }
