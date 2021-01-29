@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5241047235204795538}
   m_Layer: 0
   m_Name: Canoa
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +126,4 @@ MonoBehaviour:
   materialValue: 0
   rb: {fileID: 6814666009834835986}
   displaySprite: {fileID: 0}
+  audioClip: {fileID: 0}
