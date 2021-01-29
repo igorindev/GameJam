@@ -104,7 +104,7 @@ public class DeliveryZone : MonoBehaviour
         {
             StopCoroutine(timer);
         }
-
+        clients.GetChild(activeClient).gameObject.SetActive(false);
         isColldown = true;
 
         StartCoroutine(CreateNewDelivery());

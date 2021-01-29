@@ -23,7 +23,7 @@ namespace NineRealmsTools
         {
             canvasGroup = GetComponent<CanvasGroup>();
 
-            StarFade();
+            //StarFade();
         }
 
         [ContextMenu("StartFade")]
