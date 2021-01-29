@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class DeliveryZone : MonoBehaviour
 {
     public string currentItemToDeliver;
+    [SerializeField] Transform clients;
     [SerializeField] float timeForNewDelivery = 2;
     [SerializeField] float waitDuration = 10;
     [SerializeField] Image timerBar;
     [SerializeField] TextMeshProUGUI itemName;
     [SerializeField] ParticleSystem effect;
 
+    int activeClient;
     Coroutine timer;
     bool isColldown = false;
 
@@ -47,6 +49,7 @@ public class DeliveryZone : MonoBehaviour
     void ReceiveDelivery()
     {
         //Give points
+        clients.GetChild(activeClient).gameObject.SetActive(false);
         itemName.text = "Delivered!";
         timerBar.transform.parent.gameObject.SetActive(false);
         effect.Play();
@@ -81,6 +84,10 @@ public class DeliveryZone : MonoBehaviour
 
     void Create(Delivery item)
     {
+        activeClient = Random.Range(0, clients.childCount);
+
+        clients.GetChild(activeClient).gameObject.SetActive(true);
+
         //Ruffle new item to delivery
         currentItemToDeliver = item.name.Split(char.Parse("("))[0];
 
