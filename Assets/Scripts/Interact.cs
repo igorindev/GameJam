@@ -26,12 +26,19 @@ public class Interact : MonoBehaviour
             {
                 if (Physics.Raycast(cameraPos.position, cameraPos.forward, out RaycastHit hit, interactDistance, layers))
                 {
-                    holdingItem = hit.transform.GetComponent<Delivery>();
+                    if (hit.collider.CompareTag("Switch"))
+                    {
+                        hit.transform.parent.GetComponent<Blackout>().LightsOn();
+                    }
+                    else
+                    {
+                        holdingItem = hit.transform.GetComponent<Delivery>();
 
-                    holdingItem.Rb.isKinematic = true;
+                        holdingItem.Rb.isKinematic = true;
 
-                    hitted.SetFloat("Boolean_Outline", 0);
-                    hitted = null;
+                        hitted.SetFloat("Boolean_Outline", 0);
+                        hitted = null;
+                    }
                 }
             }
         }
@@ -91,8 +98,15 @@ public class Interact : MonoBehaviour
                 hitted.SetFloat("Boolean_Outline", 0);
             }
 
-            hitted = hit.transform.GetComponent<Renderer>().material;
-
+            if (hit.transform.TryGetComponent(out Renderer r))
+            {
+                hitted = r.material;
+            }
+            else
+            {
+                return;
+            }
+           
             hitted.SetFloat("Boolean_Outline", 1);
             return;
         }

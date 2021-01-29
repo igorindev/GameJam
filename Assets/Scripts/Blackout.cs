@@ -5,21 +5,26 @@ using UnityEngine;
 public class Blackout : MonoBehaviour
 {
     [SerializeField] Vector2 timeToNextBlackout;
-    [SerializeField] Light[] lights;
+    [SerializeField] Light mainLight;
+    [SerializeField] Light switchLight;
+
+    bool on;
 
     private void Start()
     {
+        LightsOn();
         RuffleDelayTime();
     }
 
     public void LightsOn()
     {
-        for (int i = 0; i < lights.Length; i++)
+        if (!on)
         {
-            lights[i].enabled = true;
+            on = true;
+            mainLight.intensity = 4f;
+            switchLight.color = Color.green;
+            RuffleDelayTime();
         }
-
-        RuffleDelayTime();
     }
 
     void RuffleDelayTime()
@@ -33,9 +38,8 @@ public class Blackout : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        for (int i = 0; i < lights.Length; i++)
-        {
-            lights[i].enabled = false;
-        }
+        on = false;
+        mainLight.intensity = 0f;
+        switchLight.color = Color.red;
     }
 }
