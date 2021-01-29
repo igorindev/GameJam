@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6089307446101311345}
   - component: {fileID: 6089307446101311344}
   m_Layer: 8
-  m_Name: Copo_Plastico
+  m_Name: "Copo Pl\xE1stico"
   m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f38125dcfd4dd14d9040a2760b11968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 0
+  materialValue: 0
   rb: {fileID: 6089307446101311346}
 --- !u!65 &6089307446101311344
 BoxCollider:
