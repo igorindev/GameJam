@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Refri
+    second: {fileID: 2100000, guid: 3385a2b815aa17e49af0aaa105cc4ff7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Textura
     second: {fileID: 2100000, guid: b7122c32c03fbf642aec9e1d11c5871e, type: 2}
   materials:
