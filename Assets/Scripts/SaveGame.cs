@@ -10,6 +10,7 @@ public class SaveGame : MonoBehaviour
 
     private Save save;
     public Save SaveState { get => save; }
+    public int[] Scores { get => scores; }
 
     [SerializeField] int[] scores;
 
@@ -29,9 +30,9 @@ public class SaveGame : MonoBehaviour
 
     public void AddScoreToLevel(int value)
     {
-        if (value > scores[SceneManager.GetActiveScene().buildIndex - 1])
+        if (value > Scores[SceneManager.GetActiveScene().buildIndex - 1])
         {
-            scores[SceneManager.GetActiveScene().buildIndex - 1] = value;
+            Scores[SceneManager.GetActiveScene().buildIndex - 1] = value;
         }
     }
 
@@ -41,7 +42,7 @@ public class SaveGame : MonoBehaviour
         StreamWriter fileWriter = new StreamWriter("Savegame.xml");
         XmlSerializer obj = new XmlSerializer(typeof(Save));
 
-        save.scores = scores;
+        save.scores = Scores;
 
         Debug.Log("Jogo Salvo");
 
@@ -65,6 +66,8 @@ public class SaveGame : MonoBehaviour
             fileReader = new StreamReader(fileName);
 
             save = obj.Deserialize(fileReader.BaseStream) as Save;
+
+            scores = save.scores;
 
             fileReader.Close();
         }
