@@ -6,6 +6,7 @@ public class PlayerInputHandle : MonoBehaviour
 {
     [SerializeField] PlayerController movement;
     [SerializeField] Interact interact;
+    [SerializeField] PauseMenuHandle pause;
 
     PlayerInput inputActions;
 
@@ -26,6 +27,14 @@ public class PlayerInputHandle : MonoBehaviour
         inputActions.Player.Interact.canceled += ctx => interact.InteractWithItem(false);
 
         inputActions.Player.Throw.performed += ctx => interact.Throw();
+
+        inputActions.Pause.Pause.performed += ctx => pause.Pause();
+
+    }
+
+    public void Dispose()
+    {
+        inputActions = null;
     }
 
     private void OnEnable()

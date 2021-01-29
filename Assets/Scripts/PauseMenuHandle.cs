@@ -6,16 +6,7 @@ public class PauseMenuHandle : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
     [SerializeField] PlayerInputHandle InputHandle;
-    PlayerInput inputActions;
-
     bool paused;
-
-    void Awake()
-    {
-        inputActions = new PlayerInput();
-        inputActions.Enable();
-        inputActions.Pause.Pause.performed += ctx => Pause();
-    }
 
     public void Pause()
     {

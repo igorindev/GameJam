@@ -11,6 +11,8 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
+
         save.Load();
 
         int[] saveScores = save.Scores;
