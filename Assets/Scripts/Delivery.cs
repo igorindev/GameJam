@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -8,9 +9,11 @@ public class Delivery : MonoBehaviour
 {
     [SerializeField] MaterialType materialValue;
     [SerializeField] Rigidbody rb;
+    [SerializeField] Sprite displaySprite;
     public MaterialType MaterialValue { get => materialValue; set => materialValue = value; }
     public Rigidbody Rb { get => rb; set => rb = value; }
-    public bool InHand { get; set; } = false;    
+    public bool InHand { get; set; } = false;
+    public Sprite DisplaySprite { get => displaySprite; }
 
     private void OnCollisionEnter(Collision collision)
     {
