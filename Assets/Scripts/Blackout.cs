@@ -7,6 +7,7 @@ public class Blackout : MonoBehaviour
     [SerializeField] Vector2 timeToNextBlackout;
     [SerializeField] Light mainLight;
     [SerializeField] Light switchLight;
+    [SerializeField] ParticleSystem effect;
 
     bool on = false;
 
@@ -22,6 +23,7 @@ public class Blackout : MonoBehaviour
             on = true;
             mainLight.intensity = 4f;
             switchLight.color = Color.green;
+            effect.gameObject.SetActive(false);
             RuffleDelayTime();
         }
     }
@@ -40,5 +42,6 @@ public class Blackout : MonoBehaviour
         on = false;
         mainLight.intensity = 0f;
         switchLight.color = Color.red;
+        effect.gameObject.SetActive(true);
     }
 }

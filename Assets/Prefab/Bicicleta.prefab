@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4474130016592967923}
   - component: {fileID: 9158235817236541308}
   - component: {fileID: 7806416258265194934}
-  - component: {fileID: 177623348375671103}
   m_Layer: 8
   m_Name: Bicicleta
   m_TagString: Delivery
@@ -113,7 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 4474130016592967923}
-  displaySprite: {fileID: 0}
+  displaySprite: {fileID: 5989528530762355675, guid: 93f42634dc1444547a64971c39a3dccb,
+    type: 3}
 --- !u!65 &7806416258265194934
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -125,18 +125,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.9746776, y: 0.38791144, z: 1.6108928}
-  m_Center: {x: -0.039325476, y: 0.0061562657, z: 0.79755855}
---- !u!65 &177623348375671103
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5051175042577723198}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.32509845, y: 1.4865556, z: 0.18386841}
-  m_Center: {x: 0.59584737, y: 0.00040316582, z: 1.511071}
+  m_Size: {x: 2.9746776, y: 1.4865555, z: 1.6108928}
+  m_Center: {x: -0.039325476, y: 0.00040313596, z: 0.79755855}

@@ -112,7 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 6110218521611306222}
-  displaySprite: {fileID: 0}
+  displaySprite: {fileID: -8020871552477730074, guid: 93f42634dc1444547a64971c39a3dccb,
+    type: 3}
 --- !u!65 &4736451864364541345
 BoxCollider:
   m_ObjectHideFlags: 0
