@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bd2995d1ed1300b498f1dc5d4f368175
+guid: 94f85390bae92164ca60b0077c879c14
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,43 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: AzulClaro
-    second: {fileID: 2100000, guid: 3828a058323202e41b5269b6fbc445c7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Lataria
-    second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Placa
-    second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
       name: Textura
     second: {fileID: 2100000, guid: b7122c32c03fbf642aec9e1d11c5871e, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Textura_Carro
-    second: {fileID: 2100000, guid: 3828a058323202e41b5269b6fbc445c7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Textura_Parede
-    second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Vidro
-    second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metal
-    second: {fileID: 2100000, guid: 60e8d9cf1142ca5438cd62b5073c7705, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -85,7 +50,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
