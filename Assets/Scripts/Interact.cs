@@ -11,6 +11,7 @@ public class Interact : MonoBehaviour
     [SerializeField] float pullForce = 10f;
     [SerializeField] float force = 10f;
     [SerializeField] Enemy rat;
+    [SerializeField] AudioSource source;
     Delivery holdingItem;
 
 
@@ -42,6 +43,12 @@ public class Interact : MonoBehaviour
 
                         holdingItem.gameObject.layer = 10;
                         holdingItem.Rb.isKinematic = true;
+
+                        if (HoldingItem.AudioClip != null)
+                        {
+                            source.PlayOneShot(HoldingItem.AudioClip);
+                        }
+
 
                         hitted.SetFloat("Boolean_Outline", 0);
                         hitted = null;
@@ -86,8 +93,8 @@ public class Interact : MonoBehaviour
     {
         if (holdingItem != null)
         {
-            float rbMass = pullForce; 
-            
+            float rbMass = pullForce;
+
             Vector3 pos = new Vector3(handPos.position.x, Mathf.Clamp(handPos.position.y, 1, 100), handPos.position.z);
 
             Vector3 movePosition = Vector3.Lerp(holdingItem.transform.position, pos, rbMass * Time.deltaTime);
@@ -114,7 +121,7 @@ public class Interact : MonoBehaviour
             {
                 return;
             }
-           
+
             hitted.SetFloat("Boolean_Outline", 1);
             return;
         }

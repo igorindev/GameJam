@@ -10,18 +10,20 @@ public class Delivery : MonoBehaviour
     [SerializeField] MaterialType materialValue;
     [SerializeField] Rigidbody rb;
     [SerializeField] Sprite displaySprite;
+    [SerializeField] AudioClip audioClip;
     public MaterialType MaterialValue { get => materialValue; set => materialValue = value; }
     public Rigidbody Rb { get => rb; set => rb = value; }
     public bool InHand { get; set; } = false;
     public bool GetByRat { get; set; } = false;
     public Sprite DisplaySprite { get => displaySprite; }
+    public AudioClip AudioClip { get => audioClip; }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (InHand)
         {
-            GameManager.instance.effect.transform.position = collision.GetContact(0).point;
-            GameManager.instance.effect.Play();
+            GameManager.instance.Effect.transform.position = collision.GetContact(0).point;
+            GameManager.instance.Effect.Play();
 
             InHand = false;
         }

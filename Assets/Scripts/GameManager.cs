@@ -9,23 +9,36 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public VisualEffect effect;
+    [SerializeField] SaveGame save;
+    [SerializeField] VisualEffect effect;
     [SerializeField] Transform[] spawnPoint;
+    [SerializeField] PlayerInputHandle playerInputHandle;
+
+    [Header("Interface")]
     [SerializeField] TextMeshProUGUI points;
     [SerializeField] TextMeshProUGUI timerText;
+
+    [Header("GameOver")]
+    [SerializeField] TextMeshProUGUI scoreEnd;
+    [SerializeField] GameObject endGame;
+
     [SerializeField] FadeAnimation bonusTimer;
+
     [SerializeField] Delivery[] allGameItens;
+
     [SerializeField] List<Delivery> allGameSpawned;
     [SerializeField] List<Delivery> allGameNotSpawned;
-    [SerializeField] public int minutesDuration;
-    [SerializeField] public int numOfStartItens;
-    [SerializeField] public int numOfDropItens;
 
-    float totalPoints; 
+    [SerializeField] int minutesDuration;
+    [SerializeField] int numOfStartItens;
+    [SerializeField] int numOfDropItens;
+
+    int totalPoints; 
 
     public Delivery[] AllGameItens { get => allGameItens; set => allGameItens = value; }
     public List<Delivery> AllGameSpawned { get => allGameSpawned; set => allGameSpawned = value; }
     public Transform SpawnPoint { get => spawnPoint[Random.Range(0, spawnPoint.Length)]; }
+    public VisualEffect Effect { get => effect; }
 
     int minutes;
     int seconds;
@@ -128,12 +141,17 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("Time up");
+            GameOver();
         }
     }
 
     void GameOver()
     {
-
+        save.AddScoreToLevel(totalPoints);
+        scoreEnd.text = totalPoints.ToString();
+        playerInputHandle.enabled = false;
+        Time.timeScale = 0;
+        endGame.SetActive(true);
     }
 
     void ShowPoints()
