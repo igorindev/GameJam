@@ -95,7 +95,10 @@ public class DeliveryZone : MonoBehaviour
         //Ruffle new item to delivery
         currentItemToDeliver = item.name.Split(char.Parse("("))[0];
 
-        iconImage.sprite = item.DisplaySprite;
+        if (item.DisplaySprite != null)
+        {
+            iconImage.sprite = item.DisplaySprite;
+        }
 
         timerBar.transform.parent.gameObject.SetActive(true);
         iconImage.transform.parent.gameObject.SetActive(true);
