@@ -11591,6 +11591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 4173078436349844144}
   interact: {fileID: 4173078436349844145}
+  pause: {fileID: 4173078436349844146}
 --- !u!114 &4173078436349844144
 MonoBehaviour:
   m_ObjectHideFlags: 0
