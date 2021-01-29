@@ -62,6 +62,9 @@ TextureImporter:
   - first:
       213: 6445419040905072012
     second: Papel_05
+  - first:
+      213: 9196255557977001486
+    second: Papel_06
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -186,10 +189,10 @@ TextureImporter:
       name: Quadro
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1306
-        width: 765
-        height: 719
+        x: 5
+        y: 1294
+        width: 777
+        height: 740
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -598,6 +601,27 @@ TextureImporter:
       bones: []
       spriteID: 9ff5cf3d28a3848b0800000000000000
       internalID: -5167816238830952455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Papel_06
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 609
+        width: 325
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0e4ee4c4b9af9f70800000000000000
+      internalID: 9196255557977001486
       vertices: []
       indices: 
       edges: []
