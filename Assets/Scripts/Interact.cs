@@ -10,6 +10,7 @@ public class Interact : MonoBehaviour
     [SerializeField] float interactDistance = 1f;
     [SerializeField] float pullForce = 10f;
     [SerializeField] float force = 10f;
+    [SerializeField] Enemy rat;
     Delivery holdingItem;
 
 
@@ -33,6 +34,12 @@ public class Interact : MonoBehaviour
                     else
                     {
                         holdingItem = hit.transform.GetComponent<Delivery>();
+
+                        if (holdingItem.GetByRat)
+                        {
+                            rat.RemoveHolding();
+                        }
+
                         holdingItem.gameObject.layer = 10;
                         holdingItem.Rb.isKinematic = true;
 

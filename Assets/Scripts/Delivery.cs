@@ -13,6 +13,7 @@ public class Delivery : MonoBehaviour
     public MaterialType MaterialValue { get => materialValue; set => materialValue = value; }
     public Rigidbody Rb { get => rb; set => rb = value; }
     public bool InHand { get; set; } = false;
+    public bool GetByRat { get; set; } = false;
     public Sprite DisplaySprite { get => displaySprite; }
 
     private void OnCollisionEnter(Collision collision)
