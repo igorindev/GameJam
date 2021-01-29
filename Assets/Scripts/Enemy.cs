@@ -60,8 +60,25 @@ public class Enemy : MonoBehaviour
 
             yield return null;
         }
+        int i = 0;
+        while (true)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[i].position, speed * Time.deltaTime);
+            Vector3 dir = (waypoints[i].position - transform.position).normalized;
+            transform.rotation = Quaternion.LookRotation(dir);
 
-        //move around
+            if (Vector3.Distance(transform.position, waypoints[i].position) < 0.5f)
+            {
+                i += 1;
+
+                if (i >= waypoints.Length)
+                {
+                    i = 0;
+                }
+            }
+
+            yield return null;
+        }
     }
 
     IEnumerator GoAway()
