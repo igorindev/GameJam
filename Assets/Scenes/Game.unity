@@ -2673,6 +2673,7 @@ MonoBehaviour:
   timeForNewDelivery: 5
   waitDuration: 50
   timerBar: {fileID: 285735978}
+  displayImage: {fileID: 0}
   itemName: {fileID: 2037141565}
   effectCongrats: {fileID: 769313246}
   effectMissed: {fileID: 1652535663}
@@ -4890,6 +4891,7 @@ MonoBehaviour:
   - {fileID: 1615025913290505569, guid: a11007467d2925f48a0a129a0660ba0f, type: 3}
   - {fileID: 3945505781853382813, guid: 130a5946d09728a44bad870c0e912ab6, type: 3}
   - {fileID: 1767690710108199458, guid: f5eda0e2080d87a49ba0c562aafe7176, type: 3}
+  - {fileID: 18952334448226380, guid: 9b218178b1b104f468cdeaad5966d5bb, type: 3}
   - {fileID: 4298779046611387101, guid: 4eebabf62e89c2246b1aba16cca2ef67, type: 3}
   - {fileID: 9158235817236541308, guid: 2cf7affa47efa2043bd41272a66efced, type: 3}
   - {fileID: 5342636626254315717, guid: 37ac3b2312fbd2542a157d81b7315fbe, type: 3}
@@ -4903,6 +4905,7 @@ MonoBehaviour:
   - {fileID: 3041762459834516428, guid: b878101195f7d6c4a9a0fe10102ab916, type: 3}
   - {fileID: 973709520968454401, guid: fbfe618444943924487fe7079ba04924, type: 3}
   - {fileID: 8172910393918346007, guid: 8f74c1741a0b20d4a8d9dc2ff5ce51c9, type: 3}
+  - {fileID: 2070086153040348595, guid: 9e47e5990342bfd4c80129c0b6df717c, type: 3}
   - {fileID: 3318172170525329929, guid: a0e11b3b30efb6d4fa73bef2c84be170, type: 3}
   - {fileID: 3422431389959818934, guid: 3b3aee1e30b1a8c489b796470a2b1f74, type: 3}
   - {fileID: 8048260435752289734, guid: c10c73fe40ebcd94a9d891c48784c05d, type: 3}
@@ -4947,6 +4950,7 @@ MonoBehaviour:
   - {fileID: 1447959502561056940, guid: 6ae2e7b77214749419404fce662affee, type: 3}
   - {fileID: 1016192399075304728, guid: 8a7060b1242ad1a44a1c7b3d52f04b87, type: 3}
   - {fileID: 350294462169733376, guid: f3d7b6505f70d764eac736c86a57990a, type: 3}
+  - {fileID: 1787935783187529409, guid: 3acdc9ddcc4ba0c4ca2897ba1cb3fcd7, type: 3}
   - {fileID: 109782061830213907, guid: d04869f40cde8944fae95ad5ee69217b, type: 3}
   - {fileID: 7685091951250873260, guid: 52baa592f54de3c418086409e463062c, type: 3}
   - {fileID: 4569214526746847779, guid: 4633aa6525513b440b9224bb9626e2a6, type: 3}
@@ -5963,6 +5967,7 @@ MonoBehaviour:
   timeForNewDelivery: 5
   waitDuration: 50
   timerBar: {fileID: 2016507192}
+  displayImage: {fileID: 0}
   itemName: {fileID: 1750591610}
   effectCongrats: {fileID: 257125489}
   effectMissed: {fileID: 757269987}
