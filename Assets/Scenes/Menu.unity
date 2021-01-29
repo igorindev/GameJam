@@ -4047,8 +4047,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.8, y: 3.6}
-  m_SizeDelta: {x: 414.4442, y: 91.500046}
+  m_AnchoredPosition: {x: 14.5, y: 5.8264}
+  m_SizeDelta: {x: 414.4442, y: 103.15277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573812285
 MonoBehaviour:
@@ -4069,9 +4069,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lost Propety Office
+  m_text: 'Lost Property Office
 
-    <size=20>Where you <s>TRY</s> found what get
+    <size=25>Where you <b>TRY</b> found what was
     lost</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ef816a0b43aa1a4b8063cf92dbe060e, type: 2}
@@ -13831,8 +13831,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 373, y: -161.70999}
-  m_SizeDelta: {x: 456.3938, y: 114.80548}
+  m_AnchoredPosition: {x: 352.5, y: -161.70999}
+  m_SizeDelta: {x: 479.84644, y: 114.80548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961557396
 MonoBehaviour:
@@ -13853,7 +13853,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 871257297778947001, guid: df318def3f2a6514cb822e42813c7ec2, type: 3}
+  m_Sprite: {fileID: 4130808854760721324, guid: df318def3f2a6514cb822e42813c7ec2,
+    type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
