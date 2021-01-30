@@ -8,6 +8,9 @@ public class Blackout : MonoBehaviour
     [SerializeField] Light mainLight;
     [SerializeField] Light switchLight;
     [SerializeField] ParticleSystem effect;
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip blackoutSound;
+    [SerializeField] AudioClip switchSound;
 
     bool on = false;
 
@@ -24,6 +27,7 @@ public class Blackout : MonoBehaviour
             mainLight.intensity = 4f;
             switchLight.color = Color.green;
             effect.gameObject.SetActive(false);
+            audioSource.PlayOneShot(switchSound);
             RuffleDelayTime();
         }
     }
@@ -43,5 +47,6 @@ public class Blackout : MonoBehaviour
         mainLight.intensity = 0f;
         switchLight.color = Color.red;
         effect.gameObject.SetActive(true);
+        audioSource.PlayOneShot(blackoutSound);
     }
 }

@@ -21,7 +21,7 @@ public class HeadBobber : MonoBehaviour
         if (Mathf.Abs(controller.moveDirection.x) > 0.1f || Mathf.Abs(controller.moveDirection.z) > 0.1f)
         {
             //Player is moving
-            timer += Time.deltaTime * walkingBobbingSpeed;
+            timer += Time.deltaTime * (walkingBobbingSpeed - GetMass());
             transform.localPosition = new Vector3(transform.localPosition.x, defaultPosY + Mathf.Sin(timer) * bobbingAmount, transform.localPosition.z);
         }
         else
@@ -30,5 +30,14 @@ public class HeadBobber : MonoBehaviour
             timer = 0;
             transform.localPosition = new Vector3(transform.localPosition.x, Mathf.Lerp(transform.localPosition.y, defaultPosY, Time.deltaTime * walkingBobbingSpeed), transform.localPosition.z);
         }
+    }
+
+    float GetMass()
+    {
+        if (controller.interact.HoldingItem != null)
+        {
+            return controller.interact.HoldingItem.Rb.mass - 1;
+        }
+        return 0;
     }
 }

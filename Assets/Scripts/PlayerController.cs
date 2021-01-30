@@ -18,20 +18,26 @@ public class PlayerController : MonoBehaviour
     [HideInInspector]
     public bool canMove = true;
 
-    Interact interact;
+    [SerializeField] AudioClip[] audioClip;
+    [SerializeField] float s = 3.2f;
+    AudioSource audioSource;
+    public Interact interact;
     Vector2 cameraValue;
     Vector2 movement;
     bool jump;
     bool crouch;
 
+    float delayTime;
+
     void Start()
     {
         interact = GetComponent<Interact>();
+        audioSource = GetComponent<AudioSource>();
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
     }
 
-    float GetSpeed()
+    public float GetSpeed()
     {
         if (interact.HoldingItem != null)
         {
@@ -42,7 +48,6 @@ public class PlayerController : MonoBehaviour
             return speed;
         }
     }
-
 
     public void Movement(Vector2 move)
     {
@@ -72,6 +77,19 @@ public class PlayerController : MonoBehaviour
             float curSpeedX = canMove ? GetSpeed() * movement.y : 0;
             float curSpeedY = canMove ? GetSpeed() * movement.x : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+            if (moveDirection != Vector3.zero)
+            {
+                if (delayTime < s)
+                {
+                    delayTime += GetSpeed() * Time.deltaTime;
+                }
+                else
+                {
+                    delayTime = 0;
+                    audioSource.PlayOneShot(audioClip[Random.Range(0, audioClip.Length)]);
+                }
+            }
 
             if (jump)
             {
