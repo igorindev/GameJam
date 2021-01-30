@@ -68,6 +68,12 @@ TextureImporter:
   - first:
       213: -2617943531521261759
     second: Papel_07
+  - first:
+      213: -7741013560711095083
+    second: Minutos
+  - first:
+      213: 8189078890074880096
+    second: Horas
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -646,6 +652,48 @@ TextureImporter:
       bones: []
       spriteID: 14fb4a18a323babd0800000000000000
       internalID: -2617943531521261759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Minutos
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1934
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc55502e25629490800000000000000
+      internalID: -7741013560711095083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Horas
+      rect:
+        serializedVersion: 2
+        x: 1855
+        y: 1889
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0683098ecd375a170800000000000000
+      internalID: 8189078890074880096
       vertices: []
       indices: 
       edges: []
