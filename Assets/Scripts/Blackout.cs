@@ -14,6 +14,15 @@ public class Blackout : MonoBehaviour
 
     bool on = false;
 
+    private void Start()
+    {
+        on = true;
+        mainLight.intensity = 4f;
+        switchLight.color = Color.green;
+        effect.gameObject.SetActive(false);
+        RuffleDelayTime();
+    }
+
     public void LightsOn()
     {
         if (!on)

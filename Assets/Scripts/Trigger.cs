@@ -22,6 +22,7 @@ public class Trigger : MonoBehaviour
 
     IEnumerator Enable(Collider other)
     {
+        other.transform.position = GameManager.instance.SpawnPoint.position;
         yield return new WaitForSeconds(0.3f);
         other.transform.GetComponent<PlayerController>().enabled = true;
     }

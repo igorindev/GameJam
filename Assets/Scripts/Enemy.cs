@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform mesh;
     [SerializeField] float speed;
     [SerializeField] Vector2 timeToNextRat;
+    [SerializeField] AudioSource audioSource;
     Delivery toTryGet;
     Delivery holding;
 
@@ -25,7 +26,7 @@ public class Enemy : MonoBehaviour
     IEnumerator Logic(float delay)
     {
         yield return new WaitForSeconds(delay);
-
+        audioSource.enabled = true;
         transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].position;
 
         while (holding == null)
@@ -120,6 +121,7 @@ public class Enemy : MonoBehaviour
 
     void RuffleDelayTime()
     {
+        audioSource.enabled = false;
         float delay = Random.Range(timeToNextRat.x, timeToNextRat.y);
 
        c = StartCoroutine(Logic(delay));
