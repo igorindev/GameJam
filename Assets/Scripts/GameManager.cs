@@ -16,18 +16,20 @@ public class GameManager : MonoBehaviour
     [Header("Interface")]
     [SerializeField] TextMeshProUGUI points;
     [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] FadeAnimation bonusTimer;
+    [SerializeField] Animator anim;
 
-    [Header("GameOver")]
+    [Header("Game Over")]
     [SerializeField] TextMeshProUGUI scoreEnd;
     [SerializeField] GameObject endGame;
 
-    [SerializeField] FadeAnimation bonusTimer;
-
+    [Header("Game Itens")]
     [SerializeField] Delivery[] allGameItens;
 
     [SerializeField] List<Delivery> allGameSpawned;
     [SerializeField] List<Delivery> allGameNotSpawned;
 
+    [Header("Level Configs")]
     [SerializeField] int minutesDuration;
     [SerializeField] int numOfStartItens;
     [SerializeField] int numOfDropItens;
@@ -169,5 +171,7 @@ public class GameManager : MonoBehaviour
     {
         totalPoints += 10;
         points.text = totalPoints.ToString();
+
+        anim.SetTrigger("Estrela");
     }
 }
