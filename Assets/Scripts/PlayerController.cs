@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (characterController.isGrounded || jump)
+        if (characterController.isGrounded)
         {
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
             float curSpeedY = canMove ? speed * movement.x : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (characterController.isGrounded && jump)
+            if (jump)
             {
                 moveDirection.y = jumpSpeed;
             }
