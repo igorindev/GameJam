@@ -103,7 +103,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4114519556740011916}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 3
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -126,3 +126,4 @@ MonoBehaviour:
   materialValue: 0
   rb: {fileID: -4602547678678924600}
   displaySprite: {fileID: 0}
+  audioClip: {fileID: 0}

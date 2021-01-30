@@ -14692,7 +14692,7 @@ MonoBehaviour:
   - {fileID: 4121159018962998420, guid: 4bab9744f06ae4a46afbf1da5c2f7269, type: 3}
   allGameSpawned: []
   allGameNotSpawned: []
-  minutesDuration: 1
+  minutesDuration: 5
   numOfStartItens: 10
   numOfDropItens: 5
 --- !u!114 &1644604966
