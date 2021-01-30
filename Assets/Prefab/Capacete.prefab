@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 143064418251821006}
   - component: {fileID: 8138225892715093035}
   - component: {fileID: 1162468885474319848}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Capacete
   m_TagString: Delivery
   m_Icon: {fileID: 0}

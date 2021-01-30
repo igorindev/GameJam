@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4645720111640050342}
   - component: {fileID: 4457824307760509449}
   - component: {fileID: 6768983114753494202}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Peixe
   m_TagString: Delivery
   m_Icon: {fileID: 0}

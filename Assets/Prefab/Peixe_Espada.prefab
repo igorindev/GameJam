@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8494652890389449725}
   - component: {fileID: 9182939260736924111}
   - component: {fileID: 5332587123081788944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Peixe_Espada
   m_TagString: Delivery
   m_Icon: {fileID: 0}

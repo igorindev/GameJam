@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 674449146019331829}
   - component: {fileID: 464596267506387201}
   - component: {fileID: 9074407035615779531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bonsai
   m_TagString: Delivery
   m_Icon: {fileID: 0}
