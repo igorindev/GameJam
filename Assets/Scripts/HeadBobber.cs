@@ -34,9 +34,9 @@ public class HeadBobber : MonoBehaviour
 
     float GetMass()
     {
-        if (controller.interact.HoldingItem != null)
+        if (controller.Interact.HoldingItem != null)
         {
-            return controller.interact.HoldingItem.Rb.mass - 1;
+            return controller.Interact.HoldingItem.Rb.mass - 1;
         }
         return 0;
     }

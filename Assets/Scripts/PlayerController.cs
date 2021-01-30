@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioClip[] audioClip;
     [SerializeField] float s = 3.2f;
     AudioSource audioSource;
-    public Interact interact;
+    Interact interact;
     Vector2 cameraValue;
     Vector2 movement;
     bool jump;
@@ -29,9 +29,11 @@ public class PlayerController : MonoBehaviour
 
     float delayTime;
 
+    public Interact Interact { get => interact; set => interact = value; }
+
     void Start()
     {
-        interact = GetComponent<Interact>();
+        Interact = GetComponent<Interact>();
         audioSource = GetComponent<AudioSource>();
         characterController = GetComponent<CharacterController>();
         rotation.y = transform.eulerAngles.y;
@@ -39,9 +41,9 @@ public class PlayerController : MonoBehaviour
 
     public float GetSpeed()
     {
-        if (interact.HoldingItem != null)
+        if (Interact.HoldingItem != null)
         {
-            return speed - interact.HoldingItem.Rb.mass / 2;
+            return speed - Interact.HoldingItem.Rb.mass / 2;
         }
         else
         {
