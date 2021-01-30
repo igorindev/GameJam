@@ -14563,9 +14563,10 @@ MonoBehaviour:
   playerInputHandle: {fileID: 4173078436349844143}
   points: {fileID: 1570882074}
   timerText: {fileID: 1588926831}
+  bonusTimer: {fileID: 1289501595}
+  anim: {fileID: 592827621}
   scoreEnd: {fileID: 1876101701}
   endGame: {fileID: 51128302}
-  bonusTimer: {fileID: 1289501595}
   allGameItens:
   - {fileID: 630579992608088385, guid: 233ca5aaa2ed7dc40abb48e68fb68a20, type: 3}
   - {fileID: 4747838115184569445, guid: 3f569f96708e1d944b3f6894fea71f4f, type: 3}
