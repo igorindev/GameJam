@@ -23,6 +23,9 @@ public class PlayerInputHandle : MonoBehaviour
         inputActions.Player.Jump.performed += ctx => movement.Jump(true);
         inputActions.Player.Jump.canceled += ctx => movement.Jump(false);
 
+        inputActions.Player.Crouch.performed += ctx => movement.Crouch(true);
+        inputActions.Player.Crouch.canceled += ctx => movement.Crouch(false);
+
         inputActions.Player.Interact.performed += ctx => interact.InteractWithItem(true);
         inputActions.Player.Interact.canceled += ctx => interact.InteractWithItem(false);
 

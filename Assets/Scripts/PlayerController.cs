@@ -12,8 +12,7 @@ public class PlayerController : MonoBehaviour
     public float lookXLimit = 45.0f;
 
     CharacterController characterController;
-    [HideInInspector]
-    public Vector3 moveDirection = Vector3.zero;
+    [HideInInspector] public Vector3 moveDirection = Vector3.zero;
     Vector2 rotation = Vector2.zero;
 
     [HideInInspector]
@@ -23,6 +22,7 @@ public class PlayerController : MonoBehaviour
     Vector2 cameraValue;
     Vector2 movement;
     bool jump;
+    bool crouch;
 
     void Start()
     {
@@ -43,10 +43,15 @@ public class PlayerController : MonoBehaviour
     {
         jump = value;
     }
+    public void Crouch(bool value)
+    {
+        crouch = value;
+    }
+    
 
     void Update()
     {
-        if (characterController.isGrounded)
+        if (characterController.isGrounded || jump)
         {
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
@@ -55,7 +60,7 @@ public class PlayerController : MonoBehaviour
             float curSpeedY = canMove ? speed * movement.x : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
-            if (jump)
+            if (characterController.isGrounded && jump)
             {
                 moveDirection.y = jumpSpeed;
             }
@@ -82,6 +87,15 @@ public class PlayerController : MonoBehaviour
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
+        }
+
+        if (crouch)
+        {
+            playerCamera.transform.parent.position = Vector3.Lerp(playerCamera.transform.parent.position, new Vector3(playerCamera.transform.parent.position.x, 1f ,playerCamera.transform.parent.position.z), 5 * Time.deltaTime);
+        }
+        else
+        {
+            playerCamera.transform.parent.position = Vector3.Lerp(playerCamera.transform.parent.position, new Vector3(playerCamera.transform.parent.position.x, 1.8f, playerCamera.transform.parent.position.z), 5 * Time.deltaTime);
         }
     }
 }
