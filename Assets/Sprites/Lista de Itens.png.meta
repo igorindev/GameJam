@@ -227,6 +227,57 @@ TextureImporter:
   - first:
       213: -5989963177986651251
     second: abajur
+  - first:
+      213: 5780416320476139668
+    second: skate
+  - first:
+      213: -1550259618514216070
+    second: liquidificador
+  - first:
+      213: 1519355453300979039
+    second: cutelo
+  - first:
+      213: -3149765756592537002
+    second: pe de cabra
+  - first:
+      213: 1260516132027892703
+    second: capacete
+  - first:
+      213: 5243456373681667679
+    second: pudim
+  - first:
+      213: 1165614391880207583
+    second: luva de boxe
+  - first:
+      213: -5686669048592555089
+    second: mala
+  - first:
+      213: -8026952601516680820
+    second: katana
+  - first:
+      213: -4856164345261943323
+    second: bonsai
+  - first:
+      213: 1875137578174445798
+    second: bola de futebol americano
+  - first:
+      213: -6271891581965212655
+    second: peixe espada
+  - first:
+      213: -8039027268157720659
+    second: televisao
+  - first:
+      213: -6515710493232492843
+    second: "gal\xE3o de gasolina"
+  - first:
+      213: -535106995756081679
+    second: emoji
+  - first:
+      213: -713840084898813083
+    second: peixe
+  - first:
+      213: 4637262081061919793
+    second: bola de volei
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -477,8 +528,8 @@ TextureImporter:
       name: baralho
       rect:
         serializedVersion: 2
-        x: 1324
-        y: 1912
+        x: 1245
+        y: 1909
         width: 80
         height: 80
       alignment: 0
@@ -498,8 +549,8 @@ TextureImporter:
       name: altere
       rect:
         serializedVersion: 2
-        x: 1572
-        y: 1904
+        x: 1375
+        y: 1899
         width: 99
         height: 99
       alignment: 0
@@ -519,8 +570,8 @@ TextureImporter:
       name: tabuleiro de xadrez
       rect:
         serializedVersion: 2
-        x: 1838
-        y: 1905
+        x: 1923
+        y: 1909
         width: 99
         height: 99
       alignment: 0
@@ -1918,6 +1969,363 @@ TextureImporter:
       bones: []
       spriteID: d8b8f6ec9306fdca0800000000000000
       internalID: -5989963177986651251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skate
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 196
+        width: 202
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490d9db740a283050800000000000000
+      internalID: 5780416320476139668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: liquidificador
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 1882
+        width: 120
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bd3d0371f5c7ae0800000000000000
+      internalID: -1550259618514216070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cutelo
+      rect:
+        serializedVersion: 2
+        x: 1705
+        y: 1863
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f55be812cb5d51510800000000000000
+      internalID: 1519355453300979039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pe de cabra
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 197
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652cc988bb8c944d0800000000000000
+      internalID: -3149765756592537002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: capacete
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 206
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd30c2b5eb04e7110800000000000000
+      internalID: 1260516132027892703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pudim
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 217
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ebd847acf74c840800000000000000
+      internalID: 5243456373681667679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: luva de boxe
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 231
+        width: 129
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc4a1d1d181d2010800000000000000
+      internalID: 1165614391880207583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mala
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 212
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3ae6b21a4e411b0800000000000000
+      internalID: -5686669048592555089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: katana
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 188
+        width: 253
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8953b533298a9090800000000000000
+      internalID: -8026952601516680820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bonsai
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 36
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e59ebdc1407b9cb0800000000000000
+      internalID: -4856164345261943323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola de futebol americano
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 15
+        width: 164
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8f21441b3d50a10800000000000000
+      internalID: 1875137578174445798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peixe espada
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 0
+        width: 275
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114633b06d3c5f8a0800000000000000
+      internalID: -6271891581965212655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: televisao
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 2
+        width: 178
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da7b7cdca43af6090800000000000000
+      internalID: -8039027268157720659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "gal\xE3o de gasolina"
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 39
+        width: 152
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de879ff3db8395a0800000000000000
+      internalID: -6515710493232492843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: emoji
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 40
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdd121c50be298f0800000000000000
+      internalID: -535106995756081679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: peixe
+      rect:
+        serializedVersion: 2
+        x: 1387
+        y: 0
+        width: 262
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56beb21993ee716f0800000000000000
+      internalID: -713840084898813083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bola de volei
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 25
+        width: 151
+        height: 151
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c95102b4dda5040800000000000000
+      internalID: 4637262081061919793
       vertices: []
       indices: 
       edges: []

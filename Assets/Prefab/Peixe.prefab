@@ -125,5 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 4457824307760509449}
-  displaySprite: {fileID: 0}
+  displaySprite: {fileID: -713840084898813083, guid: 93f42634dc1444547a64971c39a3dccb,
+    type: 3}
   audioClip: {fileID: 0}

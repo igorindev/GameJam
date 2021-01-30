@@ -112,7 +112,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   materialValue: 0
   rb: {fileID: 3303389646592130126}
-  displaySprite: {fileID: 0}
+  displaySprite: {fileID: 1519355453300979039, guid: 93f42634dc1444547a64971c39a3dccb,
+    type: 3}
   audioClip: {fileID: 0}
 --- !u!65 &1077797764267995918
 BoxCollider:
