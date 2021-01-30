@@ -14,11 +14,6 @@ public class Blackout : MonoBehaviour
 
     bool on = false;
 
-    private void Start()
-    {
-        LightsOn();
-    }
-
     public void LightsOn()
     {
         if (!on)

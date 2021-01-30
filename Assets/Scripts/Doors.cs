@@ -10,6 +10,7 @@ public class Doors : MonoBehaviour
     [SerializeField] Transform lever;
     [SerializeField] GameObject effect;
     [SerializeField] Vector2 timeToNextCloseUp;
+    [SerializeField] AudioSource audioSource;
     bool isOpen = true;
 
     private void Start()
@@ -37,6 +38,8 @@ public class Doors : MonoBehaviour
         {
             lever.localEulerAngles = new Vector3(0, 0, 0);
         }
+
+        audioSource.Play();
     }
 
     void RuffleDelayTime()
@@ -59,5 +62,7 @@ public class Doors : MonoBehaviour
 
         effect.SetActive(!isOpen);
         lever.localEulerAngles = new Vector3(0, 0, 0);
+
+        audioSource.Play();
     }
 }
