@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5587849806750623317}
   - component: {fileID: 1016192399075304731}
   - component: {fileID: 1016192399075304728}
-  - component: {fileID: 7007386625220520123}
+  - component: {fileID: 1455235862374973105}
   m_Layer: 8
   m_Name: Oculos
   m_TagString: Delivery
@@ -114,7 +114,8 @@ MonoBehaviour:
   rb: {fileID: 1016192399075304731}
   displaySprite: {fileID: -5696003250002889604, guid: 93f42634dc1444547a64971c39a3dccb,
     type: 3}
---- !u!65 &7007386625220520123
+  audioClip: {fileID: 0}
+--- !u!65 &1455235862374973105
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,5 +126,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3578987, y: 0.3289693, z: 0.12598404}
-  m_Center: {x: -0.000000059604645, y: 0.11067018, z: -0.0016307104}
+  m_Size: {x: 0.41531336, y: 0.38174304, z: 0.14619458}
+  m_Center: {x: -0.000000067055225, y: 0.12842406, z: -0.0018923134}
