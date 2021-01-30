@@ -91,11 +91,11 @@ public class PlayerController : MonoBehaviour
 
         if (crouch)
         {
-            playerCamera.transform.parent.position = Vector3.Lerp(playerCamera.transform.parent.position, new Vector3(playerCamera.transform.parent.position.x, 1f ,playerCamera.transform.parent.position.z), 5 * Time.deltaTime);
+            playerCamera.transform.parent.localPosition = Vector3.Lerp(playerCamera.transform.parent.localPosition, new Vector3(0, 1f, 0), 5 * Time.deltaTime);
         }
         else
         {
-            playerCamera.transform.parent.position = Vector3.Lerp(playerCamera.transform.parent.position, new Vector3(playerCamera.transform.parent.position.x, 1.8f, playerCamera.transform.parent.position.z), 5 * Time.deltaTime);
+            playerCamera.transform.parent.localPosition = Vector3.Lerp(playerCamera.transform.parent.localPosition, new Vector3(0, 1.8f, 0), 5 * Time.deltaTime);
         }
     }
 }
