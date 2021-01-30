@@ -25,6 +25,8 @@ public class SaveGame : MonoBehaviour
 
         save = new Save();
 
+        Load();
+
         scores = new int[SceneManager.sceneCountInBuildSettings - 1];
     }
 

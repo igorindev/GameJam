@@ -32,11 +32,6 @@ public class PlayerInputHandle : MonoBehaviour
 
     }
 
-    public void Dispose()
-    {
-        inputActions = null;
-    }
-
     private void OnEnable()
     {
         inputActions.Enable();
