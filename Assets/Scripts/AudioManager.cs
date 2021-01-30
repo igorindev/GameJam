@@ -64,21 +64,41 @@ public class AudioManager : MonoBehaviour
     //VOLUME CONTROL--------------------------------
     public void MusicVolume(float volume)
     {
+        if (volume == -20)
+        {
+            volume = -80;
+        }
+
         master.SetFloat("Music", volume);
     }
 
     public void DialogVolume(float volume)
     {
+        if (volume == -20)
+        {
+            volume = -80;
+        }
+
         master.SetFloat("Dialog", volume);
     }
 
     public void EffectsVolume(float volume)
     {
+        if (volume == -20)
+        {
+            volume = -80;
+        }
+
         master.SetFloat("Effects", volume);
     }
 
     public void GeralVolume(float volume)
     {
+        if (volume == -20)
+        {
+            volume = -80;
+        }
+
         master.SetFloat("Geral", volume);
     }
 
