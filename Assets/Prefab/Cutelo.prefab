@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3303389646592130126}
   - component: {fileID: 4039889065529575478}
   - component: {fileID: 1077797764267995918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cutelo
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   materialValue: 0
   rb: {fileID: 3303389646592130126}
   displaySprite: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!65 &1077797764267995918
 BoxCollider:
   m_ObjectHideFlags: 0

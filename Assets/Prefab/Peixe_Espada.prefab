@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8494652890389449725}
   - component: {fileID: 9182939260736924111}
   - component: {fileID: 5332587123081788944}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Peixe_Espada
-  m_TagString: Untagged
+  m_TagString: Delivery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,6 +113,7 @@ MonoBehaviour:
   materialValue: 0
   rb: {fileID: 8494652890389449725}
   displaySprite: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!65 &5332587123081788944
 BoxCollider:
   m_ObjectHideFlags: 0
