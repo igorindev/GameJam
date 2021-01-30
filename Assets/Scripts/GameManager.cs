@@ -174,4 +174,21 @@ public class GameManager : MonoBehaviour
 
         anim.SetTrigger("Estrela");
     }
+
+    public void GeralVolume(float value)
+    {
+        AudioManager.instance.GeralVolume(value);
+    }
+    public void EffectsVolume(float value)
+    {
+        AudioManager.instance.EffectsVolume(value);
+    }
+    public void Mute(bool value)
+    {
+        AudioManager.instance.Mute(value);
+    }
+    public void Sense(float value)
+    {
+        Sensibility.instance.SensibilityValue = value;
+    }
 }
