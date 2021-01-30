@@ -22897,6 +22897,7 @@ MonoBehaviour:
   mesh: {fileID: 1382124172}
   speed: 3
   timeToNextRat: {x: 10, y: 30}
+  audioSource: {fileID: 2080882608}
 --- !u!65 &2080882607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22917,7 +22918,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080882605}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2276cacc5ca773a4ab8e460b4584e41f,
     type: 2}
@@ -22925,16 +22926,16 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.8223597
-  MaxDistance: 1.41
+  MinDistance: 4.5
+  MaxDistance: 9
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -22967,7 +22968,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
