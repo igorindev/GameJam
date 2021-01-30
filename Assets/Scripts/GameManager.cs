@@ -120,6 +120,7 @@ public class GameManager : MonoBehaviour
     {
         if (minutes >= 0)
         {
+            timerText.text = minutes.ToString("d2") + ":" + seconds.ToString("d2");
             if (Time.time - startTime > delayTime)
             {
                 startTime = Time.time;
@@ -134,12 +135,11 @@ public class GameManager : MonoBehaviour
                     seconds -= 1;
                 }
             }
-
-            timerText.text = minutes.ToString("d2") + ":" + seconds.ToString("d2");
         }
         else
         {
             Debug.Log("Time up");
+            timerText.text = "00:00";
             GameOver();
         }
     }
