@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public Camera playerCamera;
-    public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
 
     CharacterController characterController;
@@ -30,6 +29,7 @@ public class PlayerController : MonoBehaviour
     float delayTime;
 
     public Interact Interact { get => interact; set => interact = value; }
+    public float LookSpeed { get => Sensibility.instance.SensibilityValue * Time.deltaTime; }
 
     void Start()
     {
@@ -110,8 +110,8 @@ public class PlayerController : MonoBehaviour
         // Player and Camera rotation
         if (canMove)
         {
-            rotation.y += cameraValue.x * lookSpeed;
-            rotation.x -= cameraValue.y * lookSpeed;
+            rotation.y += cameraValue.x * LookSpeed;
+            rotation.x -= cameraValue.y * LookSpeed;
             rotation.x = Mathf.Clamp(rotation.x, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotation.x, 0, 0);
             transform.eulerAngles = new Vector2(0, rotation.y);
