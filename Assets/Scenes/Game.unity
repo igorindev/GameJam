@@ -921,17 +921,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644604965}
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1644604966}
         m_MethodName: LoadScene
         m_Mode: 3
@@ -7762,11 +7751,10 @@ Transform:
   - {fileID: 301903044}
   - {fileID: 1005774792}
   - {fileID: 878315935}
-  - {fileID: 2133997093}
-  - {fileID: 1954338082}
   - {fileID: 627465601}
   - {fileID: 1537454014}
   - {fileID: 1149917079}
+  - {fileID: 2133997093}
   - {fileID: 375925352}
   - {fileID: 1181836694}
   - {fileID: 57791430}
@@ -7774,6 +7762,7 @@ Transform:
   - {fileID: 544550646}
   - {fileID: 1583156263}
   - {fileID: 1431878718}
+  - {fileID: 1954338082}
   - {fileID: 129753590}
   - {fileID: 557205288}
   - {fileID: 991950569}
@@ -9081,17 +9070,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4173078436349844143}
-        m_MethodName: Dispose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1110628666
 MonoBehaviour:
@@ -13591,7 +13569,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1644604963}
   - component: {fileID: 1644604964}
-  - component: {fileID: 1644604965}
   - component: {fileID: 1644604966}
   m_Layer: 8
   m_Name: GAME MANAGER
@@ -13626,7 +13603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 034f8c16ae440d044aaf105264cf2e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  save: {fileID: 1644604965}
   effect: {fileID: 468657141}
   spawnPoint:
   - {fileID: 1558817757}
@@ -13720,19 +13696,6 @@ MonoBehaviour:
   minutesDuration: 4
   numOfStartItens: 10
   numOfDropItens: 5
---- !u!114 &1644604965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644604962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a49d3fec1b68147803691ab61536df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scores: 
 --- !u!114 &1644604966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18174,17 +18137,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1644604965}
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1644604966}
         m_MethodName: LoadScene
         m_Mode: 3

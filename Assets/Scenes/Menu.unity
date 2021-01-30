@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -280,6 +280,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10451533}
   m_Mesh: {fileID: -260081380555094639, guid: 6996c52c3018db54181f1e10107a9cf5, type: 3}
+--- !u!1 &28949553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 28949554}
+  - component: {fileID: 28949555}
+  m_Layer: 0
+  m_Name: SAVEGAME
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &28949554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28949553}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &28949555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28949553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a49d3fec1b68147803691ab61536df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scores: 
 --- !u!1 &34882457
 GameObject:
   m_ObjectHideFlags: 0
@@ -4052,7 +4096,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.5, y: 5.8264}
+  m_AnchoredPosition: {x: 13.1, y: 5.8264}
   m_SizeDelta: {x: 414.4442, y: 103.15277}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573812285
@@ -4076,7 +4120,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Lost Property Office
 
-    <size=25>Where you <b>TRY</b> found what was
+    <size=25>Where you <b>TRY</b> to find what was
     lost</size>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ef816a0b43aa1a4b8063cf92dbe060e, type: 2}
@@ -6284,7 +6328,6 @@ GameObject:
   - component: {fileID: 970238359}
   - component: {fileID: 970238358}
   - component: {fileID: 970238362}
-  - component: {fileID: 970238363}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -6388,25 +6431,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71a7bebac1c674841978e6f3116c2710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  save: {fileID: 970238363}
+  save: {fileID: 0}
   scores:
   - {fileID: 1784663172}
   - {fileID: 79703513}
   - {fileID: 1633830447}
   - {fileID: 2041088943}
---- !u!114 &970238363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970238357}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 26a49d3fec1b68147803691ab61536df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scores: 
 --- !u!1 &976706703
 GameObject:
   m_ObjectHideFlags: 0

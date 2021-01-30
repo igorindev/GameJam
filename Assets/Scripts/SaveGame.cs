@@ -25,9 +25,11 @@ public class SaveGame : MonoBehaviour
 
         save = new Save();
 
+        scores = new int[SceneManager.sceneCountInBuildSettings - 1];
+
         Load();
 
-        scores = new int[SceneManager.sceneCountInBuildSettings - 1];
+        DontDestroyOnLoad(gameObject);
     }
 
     public void AddScoreToLevel(int value)

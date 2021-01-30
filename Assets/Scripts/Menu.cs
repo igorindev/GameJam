@@ -6,14 +6,13 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    [SerializeField] SaveGame save;
     [SerializeField] TextMeshProUGUI[] scores;
 
     private void Start()
     {
         Time.timeScale = 1;
 
-        int[] saveScores = save.Scores;
+        int[] saveScores = SaveGame.instance.Scores;
 
         for (int i = 0; i < saveScores.Length; i++)
         {

@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] SaveGame save;
     [SerializeField] VisualEffect effect;
     [SerializeField] Transform[] spawnPoint;
     [SerializeField] PlayerInputHandle playerInputHandle;
@@ -147,12 +146,12 @@ public class GameManager : MonoBehaviour
 
     void GameOver()
     {
-        save.AddScoreToLevel(totalPoints);
+        SaveGame.instance.AddScoreToLevel(totalPoints);
         scoreEnd.text = totalPoints.ToString();
         playerInputHandle.enabled = false;
         Time.timeScale = 0;
         endGame.SetActive(true);
-        save.Save();
+        SaveGame.instance.Save();
     }
 
     void ShowPoints()
