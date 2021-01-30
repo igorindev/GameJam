@@ -9730,7 +9730,7 @@ MonoBehaviour:
   - {fileID: 4121159018962998420, guid: 4bab9744f06ae4a46afbf1da5c2f7269, type: 3}
   allGameSpawned: []
   allGameNotSpawned: []
-  minutesDuration: 1
+  minutesDuration: 4
   numOfStartItens: 10
   numOfDropItens: 5
 --- !u!114 &1644604965
@@ -12725,7 +12725,7 @@ MonoBehaviour:
   holder: {fileID: 2103438401}
   mesh: {fileID: 1382124172}
   speed: 3
-  timeToNextRat: {x: 5, y: 5}
+  timeToNextRat: {x: 10, y: 30}
 --- !u!65 &2080882607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12747,7 +12747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080882605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.031, z: 0}
+  m_LocalPosition: {x: 0, y: 0.031, z: -1.711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1382124172}
@@ -13130,17 +13130,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4173078436349844143}
-        m_MethodName: Dispose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &2112540922
 MonoBehaviour:

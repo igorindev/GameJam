@@ -152,6 +152,7 @@ public class GameManager : MonoBehaviour
         playerInputHandle.enabled = false;
         Time.timeScale = 0;
         endGame.SetActive(true);
+        save.Save();
     }
 
     void ShowPoints()

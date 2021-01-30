@@ -13,8 +13,6 @@ public class Menu : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        save.Load();
-
         int[] saveScores = save.Scores;
 
         for (int i = 0; i < saveScores.Length; i++)
