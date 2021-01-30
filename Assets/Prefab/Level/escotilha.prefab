@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2168546806099707716}
   - component: {fileID: 3006120049094068449}
   - component: {fileID: 1032191863777295403}
+  - component: {fileID: 3340981297112729351}
   m_Layer: 0
   m_Name: escotilha
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3340981297112729351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536828600321433086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0950198, y: 2.0950196, z: 7.9003487}
+  m_Center: {x: 1.9955886e-14, y: 1.2548708e-13, z: 3.9321477}
