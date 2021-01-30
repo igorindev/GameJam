@@ -9730,7 +9730,7 @@ MonoBehaviour:
   - {fileID: 4121159018962998420, guid: 4bab9744f06ae4a46afbf1da5c2f7269, type: 3}
   allGameSpawned: []
   allGameNotSpawned: []
-  minutesDuration: 1
+  minutesDuration: 4
   numOfStartItens: 10
   numOfDropItens: 5
 --- !u!114 &1644604965
@@ -12747,7 +12747,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080882605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.031, z: 0}
+  m_LocalPosition: {x: 0, y: 0.031, z: -1.711}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1382124172}
