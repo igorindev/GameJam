@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
-    [SerializeField] GameObject doorA;
-    [SerializeField] GameObject doorB;
+    [SerializeField] GameObject[] doors;
+    [SerializeField] BoxCollider[] triggers;
+
     [SerializeField] Transform lever;
     [SerializeField] GameObject effect;
     [SerializeField] Vector2 timeToNextCloseUp;
     bool isOpen = true;
-    
+
     private void Start()
     {
         RuffleDelayTime();
@@ -20,8 +21,12 @@ public class Doors : MonoBehaviour
     {
         isOpen = !isOpen;
 
-        doorA.SetActive(!isOpen);
-        doorB.SetActive(!isOpen);
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].SetActive(!isOpen);
+            triggers[i].enabled = isOpen;
+        }
+
         effect.SetActive(!isOpen);
 
         if (isOpen)
@@ -46,8 +51,12 @@ public class Doors : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         isOpen = false;
-        doorA.SetActive(!isOpen);
-        doorB.SetActive(!isOpen);
+        for (int i = 0; i < doors.Length; i++)
+        {
+            doors[i].SetActive(!isOpen);
+            triggers[i].enabled = isOpen;
+        }
+
         effect.SetActive(!isOpen);
         lever.localEulerAngles = new Vector3(0, 0, 0);
     }

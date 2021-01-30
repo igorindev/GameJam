@@ -135,7 +135,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            timerText.text = $"{minutes}:{seconds}";
+            timerText.text = minutes.ToString("d2") + ":" + seconds.ToString("d2");
         }
         else
         {
