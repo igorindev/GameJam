@@ -4,7 +4,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 7.5f;
+    float speed = 8f;
     public float jumpSpeed = 8.0f;
     public float gravity = 20.0f;
     public Camera playerCamera;
@@ -31,6 +31,19 @@ public class PlayerController : MonoBehaviour
         rotation.y = transform.eulerAngles.y;
     }
 
+    float GetSpeed()
+    {
+        if (interact.HoldingItem != null)
+        {
+            return speed - interact.HoldingItem.Rb.mass / 2;
+        }
+        else
+        {
+            return speed;
+        }
+    }
+
+
     public void Movement(Vector2 move)
     {
         movement = move;
@@ -47,7 +60,7 @@ public class PlayerController : MonoBehaviour
     {
         crouch = value;
     }
-    
+
 
     void Update()
     {
@@ -56,8 +69,8 @@ public class PlayerController : MonoBehaviour
             // We are grounded, so recalculate move direction based on axes
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
-            float curSpeedX = canMove ? speed * movement.y : 0;
-            float curSpeedY = canMove ? speed * movement.x : 0;
+            float curSpeedX = canMove ? GetSpeed() * movement.y : 0;
+            float curSpeedY = canMove ? GetSpeed() * movement.x : 0;
             moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
             if (jump)
@@ -70,11 +83,6 @@ public class PlayerController : MonoBehaviour
         // when the moveDirection is multiplied by deltaTime). This is because gravity should be applied
         // as an acceleration (ms^-2)
         moveDirection.y -= gravity * Time.deltaTime;
-
-        if (interact.HoldingItem != null)
-        {
-            moveDirection -= moveDirection * interact.HoldingItem.Rb.mass / 100;
-        }
 
         // Move the controller
         characterController.Move(moveDirection * Time.deltaTime);
