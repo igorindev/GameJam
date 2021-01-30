@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2004549650176851946}
   - component: {fileID: 8059737778229534796}
   - component: {fileID: 8201772134568652123}
+  - component: {fileID: 5977317250995668958}
   m_Layer: 8
   m_Name: Portao
   m_TagString: Delivery
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5977317250995668958
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980560059521935841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9721587, y: 0.78434557, z: 3.3065271}
+  m_Center: {x: -1.549409e-17, y: -0.010900884, z: -0.0000002980232}
