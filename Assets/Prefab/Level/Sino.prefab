@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 3403310567864410619}
   - component: {fileID: 1027602885999190112}
   - component: {fileID: 8920879216119165170}
-  - component: {fileID: 8464427786148235275}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Sino
-  m_TagString: Delivery
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -80,17 +79,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8464427786148235275
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4160069798617486587}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.18255204
-  m_Height: 0.4396085
-  m_Direction: 1
-  m_Center: {x: -0.0019147098, y: -0.00061279535, z: 0.06154302}

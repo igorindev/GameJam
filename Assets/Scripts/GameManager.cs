@@ -149,6 +149,8 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         SaveGame.instance.AddScoreToLevel(totalPoints);
+        SaveGame.instance.AddNewLevel();
+
         scoreEnd.text = totalPoints.ToString();
         playerInputHandle.enabled = false;
         Time.timeScale = 0;

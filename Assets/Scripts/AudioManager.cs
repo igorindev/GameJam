@@ -12,6 +12,10 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource MainAudioSource { get => mainAudioSource; }
 
+    public float Geral { get; set; }
+    public float Effect { get; set; }
+    public bool MuteValue { get; set; }
+
     private void Awake()
     {
         if (instance != null)
@@ -90,6 +94,8 @@ public class AudioManager : MonoBehaviour
         }
 
         master.SetFloat("Effects", volume);
+
+        Effect = volume;
     }
 
     public void GeralVolume(float volume)
@@ -100,6 +106,8 @@ public class AudioManager : MonoBehaviour
         }
 
         master.SetFloat("Geral", volume);
+
+        Geral = volume;
     }
 
     public void Mute(bool mute)
@@ -112,5 +120,7 @@ public class AudioManager : MonoBehaviour
         {
             master.SetFloat("Mute", 0);
         }
+
+        MuteValue = mute;
     }
 }
