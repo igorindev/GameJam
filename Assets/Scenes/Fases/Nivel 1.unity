@@ -5709,7 +5709,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1814444855}
   m_Direction: 0
   m_MinValue: -20
-  m_MaxValue: 0
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -9434,10 +9434,10 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.2
     m_Bias: 0.02
     m_NormalBias: 0.1
     m_NearPlane: 0.1
@@ -11511,7 +11511,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1315228815}
   m_Direction: 0
   m_MinValue: -20
-  m_MaxValue: 0
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
