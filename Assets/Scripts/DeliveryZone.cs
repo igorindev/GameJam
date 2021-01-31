@@ -13,6 +13,9 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] Image iconImage;
     [SerializeField] ParticleSystem effectCongrats;
     [SerializeField] ParticleSystem effectMissed;
+    [SerializeField] AudioClip delivered;
+    [SerializeField] AudioClip missed;
+    [SerializeField] AudioSource source;
 
     int activeClient;
     Coroutine timer;
@@ -53,7 +56,7 @@ public class DeliveryZone : MonoBehaviour
     {
         //Give points
         clients.GetChild(activeClient).gameObject.SetActive(false);
-
+        source.PlayOneShot(delivered);
         timerBar.transform.parent.gameObject.SetActive(false);
         iconImage.transform.parent.gameObject.SetActive(false);
         effectCongrats.Play();
@@ -113,7 +116,7 @@ public class DeliveryZone : MonoBehaviour
         }
         clients.GetChild(activeClient).gameObject.SetActive(false);
         isColldown = true;
-
+        source.PlayOneShot(missed);
         StartCoroutine(CreateNewDelivery());
 
         iconImage.transform.parent.gameObject.SetActive(false);
