@@ -24416,6 +24416,21 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.084812135
       objectReference: {fileID: 0}
+    - target: {fileID: 1153786747748378690, guid: 4a4e2819e0ae5ee448d15194d67555ab,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.58765596
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153786747748378690, guid: 4a4e2819e0ae5ee448d15194d67555ab,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.20617205
+      objectReference: {fileID: 0}
+    - target: {fileID: 1153786747748378690, guid: 4a4e2819e0ae5ee448d15194d67555ab,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 6.681706
+      objectReference: {fileID: 0}
     - target: {fileID: 1696494603307399347, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Size.z
@@ -24674,27 +24689,27 @@ PrefabInstance:
     - target: {fileID: 3816993017390042984, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.3230181
+      value: 1.4027615
       objectReference: {fileID: 0}
     - target: {fileID: 3816993017390042984, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.16150905
+      value: 0.20138074
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.3645688
+      value: 1.382331
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.18228449
+      value: 0.1911656
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.z
-      value: 5.0082946
+      value: 5.0082955
       objectReference: {fileID: 0}
     - target: {fileID: 4535447810382724172, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}

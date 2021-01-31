@@ -15504,27 +15504,27 @@ PrefabInstance:
     - target: {fileID: 3816993017390042984, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.3230181
+      value: 1.3999014
       objectReference: {fileID: 0}
     - target: {fileID: 3816993017390042984, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.16150905
+      value: 0.19995071
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.3645688
+      value: 1.404625
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.y
-      value: 0.18228449
+      value: 0.20231263
       objectReference: {fileID: 0}
     - target: {fileID: 4467163061709062594, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
       propertyPath: m_Center.z
-      value: 5.0082946
+      value: 5.0082965
       objectReference: {fileID: 0}
     - target: {fileID: 4535447810382724172, guid: 4a4e2819e0ae5ee448d15194d67555ab,
         type: 3}
@@ -17647,7 +17647,7 @@ MonoBehaviour:
   - {fileID: 4121159018962998420, guid: 4bab9744f06ae4a46afbf1da5c2f7269, type: 3}
   allGameSpawned: []
   allGameNotSpawned: []
-  minutesDuration: 3
+  minutesDuration: 2
   numOfStartItens: 10
   numOfDropItens: 5
 --- !u!114 &1644604966
