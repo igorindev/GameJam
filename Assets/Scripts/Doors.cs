@@ -13,6 +13,8 @@ public class Doors : MonoBehaviour
     [SerializeField] AudioSource audioSource;
     bool isOpen = true;
 
+    Coroutine c;
+
     private void Start()
     {
         RuffleDelayTime();
@@ -40,13 +42,20 @@ public class Doors : MonoBehaviour
         }
 
         audioSource.Play();
+
+        if (c != null)
+        {
+            StopCoroutine(c);
+        }
+
+        RuffleDelayTime();
     }
 
     void RuffleDelayTime()
     {
         float delay = Random.Range(timeToNextCloseUp.x, timeToNextCloseUp.y);
 
-        StartCoroutine(Delay(delay));
+        c = StartCoroutine(Delay(delay));
     }
 
     IEnumerator Delay(float delay)
