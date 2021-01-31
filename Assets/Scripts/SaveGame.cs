@@ -46,6 +46,11 @@ public class SaveGame : MonoBehaviour
 
     public void AddNewLevel()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            return;
+        }
+
         unlocked[SceneManager.GetActiveScene().buildIndex] = true;
     }
 
