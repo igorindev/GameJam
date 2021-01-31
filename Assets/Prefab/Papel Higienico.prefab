@@ -115,6 +115,7 @@ MonoBehaviour:
   rb: {fileID: 350294462169733379}
   displaySprite: {fileID: -3947211511020449932, guid: 93f42634dc1444547a64971c39a3dccb,
     type: 3}
+  audioClip: {fileID: 8300000, guid: b1ed81ab02d82d34b84c5498fdf7883b, type: 3}
 --- !u!65 &5131508678343954383
 BoxCollider:
   m_ObjectHideFlags: 0
