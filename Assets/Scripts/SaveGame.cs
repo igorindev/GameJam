@@ -21,9 +21,13 @@ public class SaveGame : MonoBehaviour
         if (instance != null)
         {
             Debug.Log("Ja existe um SaveGame manager");
+            Destroy(gameObject);
             return;
         }
-        instance = this;
+        else
+        {
+            instance = this;
+        }
 
         save = new Save();
 
@@ -62,8 +66,6 @@ public class SaveGame : MonoBehaviour
 
         save.scores = Scores;
         save.unlocked = Unlocked;
-
-        Debug.Log("Jogo Salvo");
 
         obj.Serialize(fileWriter.BaseStream, save);
         fileWriter.Close();

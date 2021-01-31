@@ -20,10 +20,14 @@ public class AudioManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.Log("Ja existe um Audio manager");
+            Debug.Log("Ja existe um AudioManager");
+            Destroy(gameObject);
             return;
         }
-        instance = this;
+        else
+        {
+            instance = this;
+        }
     }
 
     public void PlayMusic(AudioClip sound, bool fade = true)

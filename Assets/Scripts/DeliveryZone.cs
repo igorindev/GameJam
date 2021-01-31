@@ -13,6 +13,7 @@ public class DeliveryZone : MonoBehaviour
     [SerializeField] Image iconImage;
     [SerializeField] ParticleSystem effectCongrats;
     [SerializeField] ParticleSystem effectMissed;
+    [SerializeField] AudioClip newClient;
     [SerializeField] AudioClip delivered;
     [SerializeField] AudioClip missed;
     [SerializeField] AudioSource source;
@@ -94,6 +95,7 @@ public class DeliveryZone : MonoBehaviour
         activeClient = Random.Range(0, clients.childCount);
 
         clients.GetChild(activeClient).gameObject.SetActive(true);
+        source.PlayOneShot(newClient);
 
         //Ruffle new item to delivery
         currentItemToDeliver = item.name.Split(char.Parse("("))[0];

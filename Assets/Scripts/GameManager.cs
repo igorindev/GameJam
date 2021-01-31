@@ -140,7 +140,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Time up");
             timerText.text = "00:00";
             GameOver();
         }

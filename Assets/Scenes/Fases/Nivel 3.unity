@@ -13906,6 +13906,7 @@ MonoBehaviour:
   iconImage: {fileID: 426904385}
   effectCongrats: {fileID: 769313246}
   effectMissed: {fileID: 1652535663}
+  newClient: {fileID: 8300000, guid: 58f78c8464fef504fb81f2783dc7a03a, type: 3}
   delivered: {fileID: 8300000, guid: 0b31173a97090894fb3b20048e7ed4d0, type: 3}
   missed: {fileID: 8300000, guid: 2cce936555cd93e418e30132e2f605fd, type: 3}
   source: {fileID: 908366295}
@@ -32742,6 +32743,7 @@ MonoBehaviour:
   iconImage: {fileID: 324691072}
   effectCongrats: {fileID: 257125489}
   effectMissed: {fileID: 757269987}
+  newClient: {fileID: 8300000, guid: 58f78c8464fef504fb81f2783dc7a03a, type: 3}
   delivered: {fileID: 8300000, guid: 0b31173a97090894fb3b20048e7ed4d0, type: 3}
   missed: {fileID: 8300000, guid: 2cce936555cd93e418e30132e2f605fd, type: 3}
   source: {fileID: 908366295}
