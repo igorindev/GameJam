@@ -127,4 +127,4 @@ MonoBehaviour:
   rb: {fileID: 4457824307760509449}
   displaySprite: {fileID: -713840084898813083, guid: 93f42634dc1444547a64971c39a3dccb,
     type: 3}
-  audioClip: {fileID: 0}
+  audioClip: {fileID: 8300000, guid: 9917e8f6251288149b23802d815e6336, type: 3}

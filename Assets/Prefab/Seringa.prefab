@@ -114,6 +114,7 @@ MonoBehaviour:
   rb: {fileID: 8727743141997524522}
   displaySprite: {fileID: -1141083888285131197, guid: 93f42634dc1444547a64971c39a3dccb,
     type: 3}
+  audioClip: {fileID: 8300000, guid: 85bb4ca7d61b25b4c94f611596f0441f, type: 3}
 --- !u!136 &8727743141997524524
 CapsuleCollider:
   m_ObjectHideFlags: 0
