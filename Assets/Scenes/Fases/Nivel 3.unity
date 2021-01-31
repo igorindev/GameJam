@@ -20605,6 +20605,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portao
       objectReference: {fileID: 0}
+    - target: {fileID: 6980560059521935841, guid: 54620ae00417583448d094aaa3f295b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 54620ae00417583448d094aaa3f295b3, type: 3}
 --- !u!4 &1300406475 stripped
