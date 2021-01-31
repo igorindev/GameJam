@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <Save xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <scores>
-    <int>10</int>
+    <int>190</int>
     <int>210</int>
-    <int>130</int>
-    <int>0</int>
+    <int>380</int>
+    <int>340</int>
   </scores>
   <unlocked>
     <boolean>true</boolean>
